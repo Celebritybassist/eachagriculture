@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from tixia.dexignzone.com/codeigniter/demo/form_element by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 09 Feb 2023 06:08:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+    <meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="Tixia - Crypto Codeigniter Admin Dashboard" />
+	<meta property="og:title" content="Tixia - Crypto Codeigniter Admin Dashboard" />
+	<meta property="og:description" content="Tixia - Crypto Codeigniter Admin Dashboard" />
+	<meta property="og:image" content="../social-image.png" />
+	<meta name="format-detection" content="telephone=no">
+    <title>Eachagriculture || Forms</title>
+    <!-- Favicon icon -->
+	
+	<link rel="icon" type="image/png" sizes="16x16" href="public/assets/images/eachagricultural.jpeg">	
+	
+			
+		 <link href="public/assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" type="text/css"/>	
+		
+		 <link href="public/assets/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css"/>	
+		
+		 <link href="public/assets/css/style.css" rel="stylesheet" type="text/css"/>	
+		
+</head>
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+	
+	<!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+		<!--**********************************
+	Nav header start
+***********************************-->
+<div class="nav-header" style="background-color:#1f6306;">
+	<img src="public/assets/images/agric-site.gif" alt="" width="100">
+	<!-- <a href="index.html" class="brand-logo">
+		<svg class="logo-abbr" width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path class="svg-logo-path" d="M18.281 14.25C18.281 13.2145 19.1204 12.375 20.156 12.375H35.3438C36.3794 12.375 37.2188 13.2145 37.2188 14.25C37.2188 15.2856 36.3794 16.125 35.3438 16.125H20.156C19.1204 16.125 18.281 15.2856 18.281 14.25ZM44.25 14.25C44.25 15.2839 45.0911 16.125 46.125 16.125C47.1606 16.125 48 16.9645 48 18V26.2461C48 27.2817 47.1606 28.1211 46.125 28.1211H32.2766L25.3258 35.072C24.5935 35.8043 23.4063 35.8041 22.6742 35.072L15.7234 28.1211H1.875C0.839437 28.1211 0 27.2817 0 26.2461V18C0 16.9645 0.839437 16.125 1.875 16.125C2.90887 16.125 3.75 15.2839 3.75 14.25C3.75 13.2162 2.90887 12.375 1.875 12.375C0.839437 12.375 0 11.5356 0 10.5V2.25397C0 1.2184 0.839437 0.378967 1.875 0.378967H46.125C47.1606 0.378967 48 1.2184 48 2.25397V10.5C48 11.5356 47.1606 12.375 46.125 12.375C45.0911 12.375 44.25 13.2162 44.25 14.25ZM11.2498 4.12897H3.75V8.94631C5.93259 9.72022 7.5 11.8055 7.5 14.25C7.5 16.6946 5.93259 18.7798 3.75 19.5537V24.3711H11.2498V4.12897ZM44.25 4.12897H14.9998V24.3711H16.5C16.9972 24.3711 17.4743 24.5686 17.8258 24.9202L24 31.0945L30.1742 24.9203C30.5257 24.5687 31.0028 24.3712 31.5 24.3712H44.25V19.5538C42.0674 18.7799 40.5 16.6947 40.5 14.2501C40.5 11.8056 42.0674 9.72031 44.25 8.9464V4.12897Z" fill="#2130B8"/>
+		</svg>
+		<svg class="brand-title" width="87" height="28" viewBox="0 0 87 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path class="svg-logo-title" d="M0.0880001 7.11H6.412V27H11.172V7.11H17.496V3.268H0.0880001V7.11ZM20.969 27H25.729V8.164H20.969V27ZM23.383 5.92C25.049 5.92 26.307 4.696 26.307 3.132C26.307 1.568 25.049 0.343999 23.383 0.343999C21.683 0.343999 20.459 1.568 20.459 3.132C20.459 4.696 21.683 5.92 23.383 5.92ZM40.8359 27H46.2079L39.9519 17.548L46.1399 8.164H41.0399L37.5719 13.978L33.7299 8.164H28.3579L34.5799 17.548L28.4259 27H33.5259L36.9599 21.152L40.8359 27ZM48.7933 27H53.5533V8.164H48.7933V27ZM51.2073 5.92C52.8733 5.92 54.1313 4.696 54.1313 3.132C54.1313 1.568 52.8733 0.343999 51.2073 0.343999C49.5073 0.343999 48.2833 1.568 48.2833 3.132C48.2833 4.696 49.5073 5.92 51.2073 5.92ZM57.0322 17.514C57.0322 23.396 60.8402 27.306 65.6002 27.306C68.5922 27.306 70.7342 25.878 71.8562 24.246V27H76.6502V8.164H71.8562V10.85C70.7342 9.286 68.6602 7.858 65.6342 7.858C60.8402 7.858 57.0322 11.632 57.0322 17.514ZM71.8562 17.582C71.8562 21.152 69.4762 23.124 66.8582 23.124C64.3082 23.124 61.8942 21.084 61.8942 17.514C61.8942 13.944 64.3082 12.04 66.8582 12.04C69.4762 12.04 71.8562 14.012 71.8562 17.582ZM86.2971 24.45C86.2971 22.886 85.0731 21.662 83.4071 21.662C81.6731 21.662 80.4491 22.886 80.4491 24.45C80.4491 26.014 81.6731 27.238 83.4071 27.238C85.0731 27.238 86.2971 26.014 86.2971 24.45Z" fill="#2130B8"/>
+		</svg>
+	</a> -->
+
+	<div class="nav-control">
+		<div class="hamburger">
+			<span class="line"></span><span class="line"></span><span class="line"></span>
+		</div>
+	</div>
+</div>
+<!--**********************************
+	Nav header end
+***********************************-->		        <!--**********************************
+	Header start
+***********************************-->
+<div class="header">
+	<div class="header-content">
+		<nav class="navbar navbar-expand">
+			<div class="collapse navbar-collapse justify-content-between">
+				<div class="header-left">
+					<div class="dashboard_bar">
+						Form Elements					</div>
+					</div>
+			</div>
+		</nav>
+	</div>
+</div>
+<!--**********************************
+	Header end ti-comment-alt
+***********************************-->        <!--**********************************
+	Sidebar start
+***********************************-->
+<div class="deznav">
+	<div class="deznav-scroll" style="background-color:#1f6306;">
+		<ul class="metismenu" id="menu">
+			<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+					<i class="flaticon-381-networking"></i>
+					<span class="nav-text"  style="background-color:#1f6306;">Dashboard</span>
+				</a>
+				<ul aria-expanded="false">
+					<li><a href="index.html"  style="background-color:#1f6306;">Dashboard</a></li>
+					<li><a href="customer_list.html"  style="background-color:#1f6306;">Customer List</a></li>
+				</ul>
+			</li>
+			
+			<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+					<i class="flaticon-381-notepad"></i>
+					<span class="nav-text"  style="background-color:#1f6306;">Forms</span>
+				</a>
+				<ul aria-expanded="false">
+					<li><a href="form_element.html"  style="background-color:#1f6306;">Form Elements</a></li>
+				</ul>
+			</li>
+			<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+					<i class="flaticon-381-layer-1"></i>
+					<span class="nav-text"  style="background-color:#1f6306;">Pages</span>
+				</a>
+				<ul aria-expanded="false">
+					<li><a href="page_register.html"  style="background-color:#1f6306;">Register</a></li>
+                    <li><a href="page_login.html"  style="background-color:#1f6306;">Login</a></li>
+					<li><a class="has-arrow" href="javascript:void()" aria-expanded="false"  style="background-color:#1f6306;">Error</a>
+						<ul aria-expanded="false">
+							<li><a href="page_error_400.html"  style="background-color:#1f6306;">Error 400</a></li>
+                            <li><a href="page_error_403.html"  style="background-color:#1f6306;">Error 403</a></li>
+                            <li><a href="page_error_404.html"  style="background-color:#1f6306;">Error 404</a></li>
+                            <li><a href="page_error_500.html"  style="background-color:#1f6306;">Error 500</a></li>
+                            <li><a href="page_error_503.html"  style="background-color:#1f6306;">Error 503</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="copyright">
+			<p>Eachagriculture Admin Dashboard <br/>© 2023 All Rights Reserved</p>
+			<p class="op5">Designed <span class="heart"></span> by Revoxtechsolutions</p>
+		</div>
+	</div>
+</div>
+<!--**********************************
+	Sidebar end
+***********************************-->        <!--**********************************
+	EventList
+***********************************-->
+<div class="event-sidebar dz-scroll " id="eventSidebar">
+	<div class="card shadow-none rounded-0 bg-transparent h-auto mb-0">
+		<div class="card-body text-center event-calender pb-2">
+			<input type='text' class="form-control d-none" id='datetimepicker1' />
+		</div>
+	</div>
+	<div class="card shadow-none rounded-0 bg-transparent h-auto">
+		<div class="card-header border-0 pb-0">
+			<h4 class="text-black">Upcoming Events</h4>
+		</div>
+		<div class="card-body">
+			<div class="media mb-5 align-items-center event-list">
+				<div class="p-3 text-center rounded me-3 date-bx bgl-primary">
+					<h2 class="mb-0 text-black">3</h2>
+					<h5 class="mb-1 text-black">Wed</h5>
+				</div>
+				<div class="media-body px-0">
+					<h6 class="mt-0 mb-3 fs-14"><a class="text-black" href="events.html">Live Concert Choir Charity Event 2020</a></h6>
+					<ul class="fs-14 list-inline mb-2 d-flex justify-content-between">
+						<li>Ticket Sold</li>
+						<li>561/650</li>
+					</ul>
+					<div class="progress mb-0" style="height:4px; width:100%;">
+						<div class="progress-bar bg-warning progress-animated" style="width:85%; height:8px;" role="progressbar">
+							<span class="sr-only">60% Complete</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="media mb-5 align-items-center event-list">
+				<div class="p-3 text-center rounded me-3 date-bx bgl-primary">
+					<h2 class="mb-0 text-black">16</h2>
+					<h5 class="mb-1 text-black">Tue</h5>
+				</div>
+				<div class="media-body px-0">
+					<h6 class="mt-0 mb-3 fs-14"><a class="text-black" href="events.html">Beautiful Fireworks Show In The New Year Night</a></h6>
+					<ul class="fs-14 list-inline mb-2 d-flex justify-content-between">
+						<li>Ticket Sold</li>
+						<li>431/650</li>
+					</ul>
+					<div class="progress mb-0" style="height:4px; width:100%;">
+						<div class="progress-bar bg-warning progress-animated" style="width:50%; height:8px;" role="progressbar">
+							<span class="sr-only">60% Complete</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="media mb-0 align-items-center event-list">
+				<div class="p-3 text-center rounded me-3 date-bx bgl-success">
+					<h2 class="mb-0 text-black">28</h2>
+					<h5 class="mb-1 text-black">Fri</h5>
+				</div>
+				<div class="media-body px-0">
+					<h6 class="mt-0 mb-3 fs-14"><a class="text-black" href="events.html">The Story Of Danau Toba (Musical Drama)</a></h6>
+					<ul class="fs-14 list-inline mb-2 d-flex justify-content-between">
+						<li>Ticket Sold</li>
+						<li>650/650</li>
+					</ul>
+					<div class="progress mb-0" style="height:4px; width:100%;">
+						<div class="progress-bar bg-success progress-animated" style="width:100%; height:8px;" role="progressbar">
+							<span class="sr-only">60% Complete</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-footer justify-content-between border-0 d-flex fs-14">
+			<span>5 events more</span>
+			<a href="javascript:void(0);" class="text-primary">View more <i class="las la-long-arrow-alt-right scale5 ms-2"></i></a>
+		</div>
+	</div>
+	<div class="card shadow-none rounded-0 bg-transparent h-auto mb-0">
+		<div class="card-body text-center event-calender">
+			<a href="javascript:void(0);" class="btn btn-primary btn-rounded btn shadow">
+				+ New Event
+			</a>
+		</div>
+	</div>
+</div>
+
+<!--**********************************
+	EventList END
+***********************************-->        <!--**********************************
+	Content body start
+***********************************-->
+<div class="content-body">
+	<div class="container-fluid">
+		<div class="row page-titles">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item active"><a href="javascript:void(0)">Form</a></li>
+				<li class="breadcrumb-item"><a href="javascript:void(0)">Form Elements</a></li>
+			</ol>
+		</div>
+		<!-- row -->
+		<div class="row">
+			<div class="col-xl-6 col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Input Style</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form>
+								<div class="mb-3">
+									<input type="text" class="form-control input-default " placeholder="input-default">
+								</div>
+								<div class="mb-3">
+									<input type="text" class="form-control input-rounded" placeholder="input-rounded">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Checkbox</h4>
+					</div>
+					<div class="card-body">
+						<div class="row">
+							<div class="col-xl-4 col-xxl-6 col-6">
+								<div class="form-check custom-checkbox mb-3">
+									<input type="checkbox" class="form-check-input" id="customCheckBox1" required>
+									<label class="form-check-label" for="customCheckBox1">Checkbox 1</label>
+								</div>
+							</div>
+							<div class="col-xl-4 col-xxl-6 col-6">
+								<div class="form-check custom-checkbox mb-3 checkbox-info">
+									<input type="checkbox" class="form-check-input" checked id="customCheckBox2" required>
+									<label class="form-check-label" for="customCheckBox2">Checkbox 2</label>
+								</div>
+							</div>
+							<div class="col-xl-4 col-xxl-6 col-6">
+								<div class="form-check custom-checkbox mb-3 checkbox-success">
+									<input type="checkbox" class="form-check-input" checked id="customCheckBox3" required>
+									<label class="form-check-label" for="customCheckBox3">Checkbox 3</label>
+								</div>
+							</div>
+							<div class="col-xl-4 col-xxl-6 col-6">
+								<div class="form-check custom-checkbox mb-3 checkbox-warning">
+									<input type="checkbox" class="form-check-input" checked id="customCheckBox4" required>
+									<label class="form-check-label" for="customCheckBox4">Checkbox 4</label>
+								</div>
+							</div>
+							<div class="col-xl-4 col-xxl-6 col-6">
+								<div class="form-check custom-checkbox mb-3 checkbox-danger">
+									<input type="checkbox" class="form-check-input" checked id="customCheckBox5" required>
+									<label class="form-check-label" for="customCheckBox5">Checkbox 5</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<div class="form-check custom-checkbox mb-3 check-xs">
+									<input type="checkbox" class="form-check-input" checked id="customCheckBox6" required>
+									<label class="form-check-label" for="customCheckBox6"></label>
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-check custom-checkbox mb-3 checkbox-info">
+									<input type="checkbox" class="form-check-input" checked id="customCheckBox7" required>
+									<label class="form-check-label" for="customCheckBox7"></label>
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-check custom-checkbox mb-3 checkbox-success check-lg">
+									<input type="checkbox" class="form-check-input" checked id="customCheckBox8" required>
+									<label class="form-check-label" for="customCheckBox8"></label>
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-check custom-checkbox mb-3 checkbox-warning check-xl">
+									<input type="checkbox" class="form-check-input" checked id="customCheckBox9" required>
+									<label class="form-check-label" for="customCheckBox9"></label>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Textarea</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form>
+								<div class="mb-3">
+									<textarea class="form-control" rows="4" id="comment"></textarea>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Input Size</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form>
+								<div class="mb-3">
+									<input class="form-control form-control-lg" type="text" placeholder="form-control-lg">
+								</div>
+								<div class="mb-3">
+									<input class="form-control" type="text" placeholder="Default input">
+								</div>
+								<div class="mb-3">
+									<input class="form-control form-control-sm" type="text" placeholder="form-control-sm">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Select Size</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form>
+								<select class="default-select form-control wide mb-3">
+									<option>Option 1</option>
+									<option>Option 2</option>
+									<option>Option 3</option>
+								</select>
+								<select class="default-select form-control wide mb-3">
+									<option>Option 1</option>
+									<option>Option 2</option>
+									<option>Option 3</option>
+								</select>
+								<select class="default-select form-control wide">
+									<option>Option 1</option>
+									<option>Option 2</option>
+									<option>Option 3</option>
+								</select>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Select List</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form>
+								<div class="mb-3">
+									<label class="form-label">Select list (select one):</label>
+									<select class="default-select  form-control wide" >
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+									</select>
+								</div>
+								<select multiple class="default-select form-control wide mt-3" >
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-12">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Horizontal Form</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form>
+
+								<div class="row">
+									<div class="mb-3 col-md-6">
+										<label class="form-label">First Name</label>
+										<input type="text" class="form-control" placeholder="1234 Main St">
+									</div>
+									<div class="mb-3 col-md-6">
+										<label class="form-label">Email</label>
+										<input type="email" class="form-control" placeholder="Email">
+									</div>
+									<div class="mb-3 col-md-6">
+										<label class="form-label">Password</label>
+										<input type="password" class="form-control" placeholder="Password">
+									</div>
+									<div class="mb-3 col-md-6">
+										<label>City</label>
+										<input type="text" class="form-control">
+									</div>
+								</div>
+								<div class="row">
+									<div class="mb-3 col-md-4">
+										<label class="form-label">State</label>
+										<select id="inputState" class="default-select form-control wide">
+											<option selected>Choose...</option>
+											<option>Option 1</option>
+											<option>Option 2</option>
+											<option>Option 3</option>
+										</select>
+									</div>
+									<div class="mb-3 col-md-2">
+										<label class="form-label">Zip</label>
+										<input type="text" class="form-control">
+									</div>
+								</div>
+								<div class="mb-3">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox">
+										<label class="form-check-label">
+											Check me out
+										</label>
+									</div>
+								</div>
+								<button type="submit" class="btn btn-primary">Sign in</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-12">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Vertical Form</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form>
+								<div class="mb-3 row">
+									<label class="col-sm-3 col-form-label">Email</label>
+									<div class="col-sm-9">
+										<input type="email" class="form-control" placeholder="Email">
+									</div>
+								</div>
+								<div class="mb-3 row">
+									<label class="col-sm-3 col-form-label">Password</label>
+									<div class="col-sm-9">
+										<input type="password" class="form-control" placeholder="Password">
+									</div>
+								</div>
+								<fieldset class="mb-3">
+									<div class="row">
+										<label class="col-form-label col-sm-3 pt-0">Radios</label>
+										<div class="col-sm-9">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="gridRadios" value="option1" checked>
+												<label class="form-check-label">
+													First radio
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="gridRadios" value="option2">
+												<label class="form-check-label">
+													Second radio
+												</label>
+											</div>
+											<div class="form-check disabled">
+												<input class="form-check-input" type="radio" name="gridRadios" value="option3" disabled>
+												<label class="form-check-label">
+													Third disabled radio
+												</label>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+								<div class="mb-3 row">
+									<div class="col-sm-3">Checkbox</div>
+									<div class="col-sm-9">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox">
+											<label class="form-check-label">
+												Example checkbox
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="mb-3 row">
+									<div class="col-sm-10">
+										<button type="submit" class="btn btn-primary">Sign in</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Checkboxes</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form>
+								<div class="mb-3">
+									<div class="form-check mb-2">
+										<input type="checkbox" class="form-check-input" id="check1" value="" checked>
+										<label class="form-check-label" for="check1">Option 1</label>
+									</div>
+									<div class="form-check mb-2">
+										<input type="checkbox" class="form-check-input" id="check2" value="">
+										<label class="form-check-label" for="check2">Option 2</label>
+									</div>
+									<div class="form-check disabled">
+										<input type="checkbox" class="form-check-input" id="check3" value="" disabled>
+										<label class="form-check-label" for="check3">Disabled</label>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Inline Checkboxes</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form>
+								<div class="mb-3">
+									<div class="form-check form-check-inline">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input" value=""
+												checked>Option 1
+										</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input" value="">Option 2
+										</label>
+									</div>
+									<div class="form-check form-check-inline disabled">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input" value=""
+												disabled>Disabled
+										</label>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Radio Buttons</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form>
+								<div class="mb-3 mb-0">
+									<div class="radio">
+										<label><input type="radio" name="optradio"> Option 1</label>
+									</div>
+									<div class="radio">
+										<label><input type="radio" name="optradio"> Option 2</label>
+									</div>
+									<div class="radio disabled">
+										<label><input type="radio" name="optradio" disabled> Option 3</label>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Inline Radio </h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form>
+								<div class="mb-3 mb-0">
+									<label class="radio-inline me-3"><input type="radio" name="optradio"> Option 1</label>
+									<label class="radio-inline me-3"><input type="radio" name="optradio"> Option 2</label>
+									<label class="radio-inline me-3"><input type="radio" name="optradio"> Option 3</label>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-12">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Readonly</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form>
+								<div class="mb-3">
+									<input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+								</div>
+								<div class="mb-3 row">
+									<label class="col-sm-3 col-form-label">Email</label>
+									<div class="col-sm-9">
+										<input type="text" readonly class="form-control-plaintext" value="email@example.com">
+									</div>
+								</div>
+								<div class="mb-3 row">
+									<label class="col-sm-3 col-form-label">Password</label>
+									<div class="col-sm-9">
+										<input type="password" class="form-control" placeholder="Password">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-12">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Inline Form</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form class="d-flex align-items-center flex-wrap">
+								<div class="mb-3 mb-2">
+									<label class="sr-only">Email</label>
+									<input type="text" readonly class="form-control-plaintext" value="email@example.com">
+								</div>
+								<div class="mb-2 mx-sm-3">
+									<label class="sr-only">Password</label>
+									<input type="password" class="form-control" placeholder="Password">
+								</div>
+								<button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-12">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Form grid</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form>
+								<div class="row">
+									<div class="col-sm-6">
+										<input type="text" class="form-control" placeholder="First name">
+									</div>
+									<div class="col-sm-6 mt-2 mt-sm-0">
+										<input type="text" class="form-control" placeholder="Last name">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-12">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Form Row</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form>
+								<div class="row">
+									<div class="col-sm-6">
+										<input type="text" class="form-control" placeholder="First name">
+									</div>
+									<div class="col-sm-6 mt-2 mt-sm-0">
+										<input type="text" class="form-control" placeholder="Last name">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-12">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Form Label Size</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form>
+								<div class="mb-3 row">
+									<label class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+									<div class="col-sm-10">
+										<input type="email" class="form-control form-control-sm" placeholder="col-form-label-sm">
+									</div>
+								</div>
+								<div class="mb-3 row">
+									<label class="col-sm-2 col-form-label">Email</label>
+									<div class="col-sm-10">
+										<input type="email" class="form-control" placeholder="col-form-label">
+									</div>
+								</div>
+								<div class="mb-3 row">
+									<label class="col-sm-2 col-form-label col-form-label-lg">Email</label>
+									<div class="col-sm-10">
+										<input type="email" class="form-control form-control-lg" placeholder="col-form-label-lg">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-12">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Column size</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form>
+								<div class="row">
+									<div class="col-sm-7">
+										<input type="text" class="form-control" placeholder="City">
+									</div>
+									<div class="col mt-2 mt-sm-0">
+										<input type="text" class="form-control" placeholder="State">
+									</div>
+									<div class="col mt-2 mt-sm-0">
+										<input type="text" class="form-control" placeholder="Zip">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-12">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Auto-sizing</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form>
+								<div class="row align-items-center">
+									<div class="col-auto">
+										<label class="sr-only">Name</label>
+										<input type="text" class="form-control mb-2" placeholder="Jane Doe">
+									</div>
+									<div class="col-auto">
+										<label class="sr-only">Username</label>
+										<div class="input-group mb-2">
+											<div class="input-group-text">@</div>
+											<input type="text" class="form-control" placeholder="Username">
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="form-check mb-2">
+											<input class="form-check-input" type="checkbox">
+											<label class="form-check-label">
+												Remember me
+											</label>
+										</div>
+									</div>
+									<div class="col-12">
+										<button type="submit" class="btn btn-primary mb-2">Submit</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Custom Select</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form>
+								<div class="row align-items-center">
+									<div class="col-auto my-1">
+										<label class="me-sm-2">Preference</label>
+									   <!--  <select class="me-sm-2 default-select form-control wide" id="inlineFormCustomSelect">
+											<option selected>Choose...</option>
+											<option value="1">One</option>
+											<option value="2">Two</option>
+											<option value="3">Three</option>
+										</select> -->
+										<select class="form-select me-sm-2 wide" aria-label="Default select example" id="inlineFormCustomSelect">
+										  <option selected>Open this select menu</option>
+										  <option value="1">Onejh</option>
+										  <option value="2">Two</option>
+										  <option value="3">Three</option>
+										</select>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Disabled forms</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form>
+								<fieldset disabled>
+									<div class="mb-3">
+										<label class="form-label">Disabled input</label>
+										<input type="text" class="form-control" placeholder="Disabled input">
+									</div>
+									<div class="mb-3">
+										<label class="form-label">Disabled select menu</label>
+										<select class="form-control ">
+											<option>Disabled select</option>
+										</select>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" disabled>
+										<label class="form-check-label">
+											Can't check this
+										</label>
+									</div>
+									<button type="submit" class="btn btn-primary mt-3">Submit</button>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Input Group</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form action="#">
+								<div class="input-group mb-3 input-warning-o">
+									<span class="input-group-text">@</span>
+									<input type="text" class="form-control" placeholder="Username">
+								</div>
+								<div class="input-group mb-3 input-success-o">
+									<span class="input-group-text">@</span>
+									<input type="text" class="form-control" placeholder="Username">
+								</div>
+								<div class="input-group mb-3 input-primary">
+									<input type="text" class="form-control" placeholder="Recipient's username">
+									<span class="input-group-text">@example.com</span>
+								</div>
+
+								<label>Your vanity URL</label>
+								<div class="input-group mb-3  input-success">
+									<span class="input-group-text">https://example.com</span>
+									<input type="text" class="form-control">
+								</div>
+
+								<div class="input-group mb-3  input-info">
+									<span class="input-group-text">$</span>
+									<input type="text" class="form-control">
+									<span class="input-group-text">.00</span>
+								</div>
+
+								<div class="input-group   input-danger">
+									<span class="input-group-text">With textarea</span>
+									<textarea class="form-control"></textarea>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Input Group Size</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form action="#">
+								<div class="input-group input-group-sm mb-3">
+									<span class="input-group-text">Small</span>
+									<input type="text" class="form-control">
+								</div>
+
+								<div class="input-group mb-3">
+									<span class="input-group-text">Default</span>
+									<input type="text" class="form-control">
+								</div>
+
+								<div class="input-group input-group-lg">
+									<span class="input-group-text">Large</span>
+									<input type="text" class="form-control">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Checkboxes and radios</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form action="#">
+								<div class="input-group mb-3">
+									<div class="input-group-text">
+										<input type="checkbox">
+									</div>
+									<input type="text" class="form-control">
+								</div>
+
+								<div class="input-group">
+									<div class="input-group-text">
+										<input type="radio">
+									</div>
+									<input type="text" class="form-control">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Multiple inputs</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form action="#">
+								<div class="input-group">
+									<span class="input-group-text">First and last name</span>
+									<input type="text" class="form-control">
+									<input type="text" class="form-control">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Multiple addons</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form action="#">
+								<div class="input-group mb-3">
+									<span class="input-group-text">$</span>
+									<span class="input-group-text">0.00</span>
+									<input type="text" class="form-control">
+								</div>
+
+								<div class="input-group">
+									<input type="text" class="form-control">
+									<span class="input-group-text">$</span>
+									<span class="input-group-text">0.00</span>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Button addons</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form action="#">
+								<div class="input-group mb-3">
+									<button class="btn btn-primary" type="button">Button</button>
+									<input type="text" class="form-control">
+								</div>
+
+								<div class="input-group mb-3">
+									<input type="text" class="form-control">
+									<button class="btn btn-primary" type="button">Button</button>
+								</div>
+
+								<div class="input-group mb-3">
+									<button class="btn btn-primary" type="button">Button</button>
+									<button class="btn btn-primary" type="button">Button</button>
+									<input type="text" class="form-control">
+								</div>
+
+								<div class="input-group">
+									<input type="text" class="form-control">
+									<button class="btn btn-primary" type="button">Button</button>
+									<button class="btn btn-primary" type="button">Button</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Buttons with dropdowns</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form action="#">
+								<div class="input-group mb-3">
+									<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">Dropdown</button>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">Action</a>
+										<a class="dropdown-item" href="#">Another action</a>
+										<a class="dropdown-item" href="#">Something else here</a>
+										<div role="separator" class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">Separated link</a>
+									</div>
+									<input type="text" class="form-control">
+								</div>
+
+								<div class="input-group">
+									<input type="text" class="form-control">
+									<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">Dropdown</button>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">Action</a>
+										<a class="dropdown-item" href="#">Another action</a>
+										<a class="dropdown-item" href="#">Something else here</a>
+										<div role="separator" class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">Separated link</a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Segmented buttons</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form action="#">
+								<div class="input-group mb-3">
+									<button type="button" class="btn btn-primary">Action</button>
+									<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">Action</a>
+										<a class="dropdown-item" href="#">Another action</a>
+										<a class="dropdown-item" href="#">Something else here</a>
+										<div role="separator" class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">Separated link</a>
+									</div>
+									<input type="text" class="form-control">
+								</div>
+
+								<div class="input-group">
+									<input type="text" class="form-control">
+									<button type="button" class="btn btn-primary">Action</button>
+									<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">Action</a>
+										<a class="dropdown-item" href="#">Another action</a>
+										<a class="dropdown-item" href="#">Something else here</a>
+										<div role="separator" class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">Separated link</a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-12">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Custom select</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form">
+							<form action="#">
+								<div class="input-group mb-3">
+									<label class="input-group-text mb-0">Options</label>
+									<!-- <select class="default-select  form-control wide">
+										<option selected>Choose...</option>
+										<option value="1">One</option>
+										<option value="2">Two</option>
+										<option value="3">Three</option>
+									</select> -->
+									<select class="form-select wide" aria-label="Default select example">
+										  <option selected>Choose...</option>
+										  <option value="1">One</option>
+										  <option value="2">Two</option>
+										  <option value="3">Three</option>
+									</select>
+								</div>
+
+								<div class="input-group mb-3">
+									<select class="form-select wide" aria-label="Default select example">
+										  <option selected>Choose...</option>
+										  <option value="1">One</option>
+										  <option value="2">Two</option>
+										  <option value="3">Three</option>
+									</select>
+									<label class="input-group-text  mb-0">Options</label>
+								</div>
+
+								<div class="input-group mb-3">
+									<button class="btn btn-primary" type="button">Button</button>
+									<select class="form-select wide" aria-label="Default select example">
+										  <option selected>Choose...</option>
+										  <option value="1">One</option>
+										  <option value="2">Two</option>
+										  <option value="3">Three</option>
+									</select>
+								</div>
+
+								<div class="input-group">
+									<select class="form-select wide" aria-label="Default select example">
+										  <option selected>Choose...</option>
+										  <option value="1">One</option>
+										  <option value="2">Two</option>
+										  <option value="3">Three</option>
+									</select>
+									<button class="btn btn-primary" type="button">Button</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-12">
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title">Custom file input</h4>
+					</div>
+					<div class="card-body">
+						<div class="basic-form custom_file_input">
+							<form action="#">
+								<div class="input-group mb-3">
+									<span class="input-group-text">Upload</span>
+									<div class="form-file">
+										<input type="file" class="form-file-input form-control">
+									</div>
+								</div>
+
+								<div class="input-group mb-3">
+									<div class="form-file">
+										<input type="file" class="form-file-input form-control">
+									</div>
+									<span class="input-group-text">Upload</span>
+								</div>
+
+								<div class="input-group mb-3">
+									<button class="btn btn-primary btn-sm" type="button">Button</button>
+									<div class="form-file">
+										<input type="file" class="form-file-input form-control">
+									</div>
+								</div>
+
+								<div class="input-group">
+									<div class="form-file">
+										<input type="file" class="form-file-input form-control">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--**********************************
+	Content body end
+***********************************-->
+        <!--**********************************
+	Footer start
+***********************************-->
+<div class="footer">
+	<div class="copyright">
+		<p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">DexignZone</a> 2022</p>
+	</div>
+</div>
+<!--**********************************
+	Footer end
+***********************************-->	</div>
+	
+			<script src="public/assets/vendor/global/global.min.js"></script>
+			<script src="public/assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+			<script src="public/assets/vendor/bootstrap-datetimepicker/js/moment.js"></script>
+			<script src="public/assets/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+		
+		
+			<script src="public/assets/js/custom.js"></script>
+			<script src="public/assets/js/deznav-init.js"></script>
+			<!-- <script src="public/assets/js/demo.js"></script>
+			<script src="public/assets/js/styleSwitcher.js"></script> -->
+			
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+</body>
+
+<!-- Mirrored from tixia.dexignzone.com/codeigniter/demo/form_element by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 09 Feb 2023 06:08:01 GMT -->
+</html>

@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from tixia.dexignzone.com/codeigniter/demo/analytics by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 09 Feb 2023 06:07:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+    <meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="Tixia - Crypto Codeigniter Admin Dashboard" />
+	<meta property="og:title" content="Tixia - Crypto Codeigniter Admin Dashboard" />
+	<meta property="og:description" content="Tixia - Crypto Codeigniter Admin Dashboard" />
+	<meta property="og:image" content="../social-image.png" />
+	<meta name="format-detection" content="telephone=no">
+    <title>Eachagriculture || Dashboard</title>
+    <!-- Favicon icon -->
+	
+	<link rel="icon" type="image/png" sizes="16x16" href="public/assets/images/eachagricultural.jpeg">	
+	
+		
+		 <link href="public/assets/vendor/chartist/css/chartist.min.css" rel="stylesheet" type="text/css"/>	
+			
+		 <link href="public/assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" type="text/css"/>	
+		
+		 <link href="public/assets/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css"/>	
+		
+		 <link href="public/assets/css/style.css" rel="stylesheet" type="text/css"/>	
+		
+</head>
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+	
+	<!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+		<!--**********************************
+	Nav header start
+***********************************-->
+<div class="nav-header" style="background-color:#1f6306;">
+	<a href="index.html" class="brand-logo">
+		<img src="public/assets/images/agric-site.gif" alt="" width="150">
+		<!-- <svg class="logo-abbr" width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path class="svg-logo-path" d="M18.281 14.25C18.281 13.2145 19.1204 12.375 20.156 12.375H35.3438C36.3794 12.375 37.2188 13.2145 37.2188 14.25C37.2188 15.2856 36.3794 16.125 35.3438 16.125H20.156C19.1204 16.125 18.281 15.2856 18.281 14.25ZM44.25 14.25C44.25 15.2839 45.0911 16.125 46.125 16.125C47.1606 16.125 48 16.9645 48 18V26.2461C48 27.2817 47.1606 28.1211 46.125 28.1211H32.2766L25.3258 35.072C24.5935 35.8043 23.4063 35.8041 22.6742 35.072L15.7234 28.1211H1.875C0.839437 28.1211 0 27.2817 0 26.2461V18C0 16.9645 0.839437 16.125 1.875 16.125C2.90887 16.125 3.75 15.2839 3.75 14.25C3.75 13.2162 2.90887 12.375 1.875 12.375C0.839437 12.375 0 11.5356 0 10.5V2.25397C0 1.2184 0.839437 0.378967 1.875 0.378967H46.125C47.1606 0.378967 48 1.2184 48 2.25397V10.5C48 11.5356 47.1606 12.375 46.125 12.375C45.0911 12.375 44.25 13.2162 44.25 14.25ZM11.2498 4.12897H3.75V8.94631C5.93259 9.72022 7.5 11.8055 7.5 14.25C7.5 16.6946 5.93259 18.7798 3.75 19.5537V24.3711H11.2498V4.12897ZM44.25 4.12897H14.9998V24.3711H16.5C16.9972 24.3711 17.4743 24.5686 17.8258 24.9202L24 31.0945L30.1742 24.9203C30.5257 24.5687 31.0028 24.3712 31.5 24.3712H44.25V19.5538C42.0674 18.7799 40.5 16.6947 40.5 14.2501C40.5 11.8056 42.0674 9.72031 44.25 8.9464V4.12897Z" fill="#2130B8"/>
+		</svg>
+		<svg class="brand-title" width="87" height="28" viewBox="0 0 87 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path class="svg-logo-title" d="M0.0880001 7.11H6.412V27H11.172V7.11H17.496V3.268H0.0880001V7.11ZM20.969 27H25.729V8.164H20.969V27ZM23.383 5.92C25.049 5.92 26.307 4.696 26.307 3.132C26.307 1.568 25.049 0.343999 23.383 0.343999C21.683 0.343999 20.459 1.568 20.459 3.132C20.459 4.696 21.683 5.92 23.383 5.92ZM40.8359 27H46.2079L39.9519 17.548L46.1399 8.164H41.0399L37.5719 13.978L33.7299 8.164H28.3579L34.5799 17.548L28.4259 27H33.5259L36.9599 21.152L40.8359 27ZM48.7933 27H53.5533V8.164H48.7933V27ZM51.2073 5.92C52.8733 5.92 54.1313 4.696 54.1313 3.132C54.1313 1.568 52.8733 0.343999 51.2073 0.343999C49.5073 0.343999 48.2833 1.568 48.2833 3.132C48.2833 4.696 49.5073 5.92 51.2073 5.92ZM57.0322 17.514C57.0322 23.396 60.8402 27.306 65.6002 27.306C68.5922 27.306 70.7342 25.878 71.8562 24.246V27H76.6502V8.164H71.8562V10.85C70.7342 9.286 68.6602 7.858 65.6342 7.858C60.8402 7.858 57.0322 11.632 57.0322 17.514ZM71.8562 17.582C71.8562 21.152 69.4762 23.124 66.8582 23.124C64.3082 23.124 61.8942 21.084 61.8942 17.514C61.8942 13.944 64.3082 12.04 66.8582 12.04C69.4762 12.04 71.8562 14.012 71.8562 17.582ZM86.2971 24.45C86.2971 22.886 85.0731 21.662 83.4071 21.662C81.6731 21.662 80.4491 22.886 80.4491 24.45C80.4491 26.014 81.6731 27.238 83.4071 27.238C85.0731 27.238 86.2971 26.014 86.2971 24.45Z" fill="#2130B8"/>
+		</svg> -->
+	</a>
+
+	<div class="nav-control">
+		<div class="hamburger">
+			<span class="line"></span><span class="line"></span><span class="line"></span>
+		</div>
+	</div>
+</div>
+<!--**********************************
+	Nav header end
+***********************************-->		  <!--**********************************
+	Header start
+***********************************-->
+<div class="header">
+	<div class="header-content">
+		<nav class="navbar navbar-expand">
+			<div class="collapse navbar-collapse justify-content-between">
+				<div class="header-left">
+					<div class="dashboard_bar">
+						Dashboard				</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+</div>
+<!--**********************************
+	Header end ti-comment-alt
+***********************************-->        <!--**********************************
+	Sidebar start
+***********************************-->
+<div class="deznav">
+	<div class="deznav-scroll" style="background-color:#1f6306;">
+		<ul class="metismenu" id="menu">
+			<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false" style="background-color:#1f6306;">
+					<i class="flaticon-381-networking"></i>
+					<span class="nav-text">Dashboard</span>
+				</a>
+				<ul aria-expanded="false">
+					<li><a href="index.html" style="background-color:#1f6306;">Dashboard</a></li>
+					<li><a href="customer_list.html" style="background-color:#1f6306;">Customer List</a></li>
+				</ul>
+			</li>
+			
+			<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+					<i class="flaticon-381-notepad"></i>
+					<span class="nav-text">Forms</span>
+				</a>
+				<ul aria-expanded="false">
+					<li><a href="form_element.html"  style="background-color:#1f6306;">Form Elements</a></li>
+				</ul>
+			</li>
+			<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+					<i class="flaticon-381-layer-1"></i>
+					<span class="nav-text"  style="background-color:#1f6306;">Pages</span>
+				</a>
+				<ul aria-expanded="false"  style="background-color:#1f6306;">
+					<li><a href="page_register.html"  style="background-color:#1f6306;">Register</a></li>
+                    <li><a href="page_login.html"  style="background-color:#1f6306;">Login</a></li>
+					<li><a class="has-arrow" href="javascript:void()" aria-expanded="false"  style="background-color:#1f6306;">Error</a>
+						<ul aria-expanded="false"  style="background-color:#1f6306;">
+							<li><a href="page_error_400.html"  style="background-color:#1f6306;">Error 400</a></li>
+                            <li><a href="page_error_403.html"  style="background-color:#1f6306;">Error 403</a></li>
+                            <li><a href="page_error_404.html"  style="background-color:#1f6306;">Error 404</a></li>
+                            <li><a href="page_error_500.html"  style="background-color:#1f6306;">Error 500</a></li>
+                            <li><a href="page_error_503.html"  style="background-color:#1f6306;">Error 503</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="copyright">
+			<p>Eachagriculture Admin Dashboard <br/>© 2023 All Rights Reserved</p>
+			<p class="op5">Designed <span class="heart"></span> by Revoxtechsolutions</p>
+		</div>
+	</div>
+</div>
+<!--**********************************
+	Sidebar end
+***********************************-->        <!--**********************************
+	EventList
+***********************************-->
+<div class="event-sidebar dz-scroll " id="eventSidebar">
+	<div class="card shadow-none rounded-0 bg-transparent h-auto mb-0">
+		<div class="card-body text-center event-calender pb-2">
+			<input type='text' class="form-control d-none" id='datetimepicker1' />
+		</div>
+	</div>
+	<div class="card shadow-none rounded-0 bg-transparent h-auto">
+		<div class="card-header border-0 pb-0">
+			<h4 class="text-black">Upcoming Events</h4>
+		</div>
+		<div class="card-body">
+			<div class="media mb-5 align-items-center event-list">
+				<div class="p-3 text-center rounded me-3 date-bx bgl-primary">
+					<h2 class="mb-0 text-black">3</h2>
+					<h5 class="mb-1 text-black">Wed</h5>
+				</div>
+				<div class="media-body px-0">
+					<h6 class="mt-0 mb-3 fs-14"><a class="text-black" href="events.html">Live Concert Choir Charity Event 2020</a></h6>
+					<ul class="fs-14 list-inline mb-2 d-flex justify-content-between">
+						<li>Ticket Sold</li>
+						<li>561/650</li>
+					</ul>
+					<div class="progress mb-0" style="height:4px; width:100%;">
+						<div class="progress-bar bg-warning progress-animated" style="width:85%; height:8px;" role="progressbar">
+							<span class="sr-only">60% Complete</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="media mb-5 align-items-center event-list">
+				<div class="p-3 text-center rounded me-3 date-bx bgl-primary">
+					<h2 class="mb-0 text-black">16</h2>
+					<h5 class="mb-1 text-black">Tue</h5>
+				</div>
+				<div class="media-body px-0">
+					<h6 class="mt-0 mb-3 fs-14"><a class="text-black" href="events.html">Beautiful Fireworks Show In The New Year Night</a></h6>
+					<ul class="fs-14 list-inline mb-2 d-flex justify-content-between">
+						<li>Ticket Sold</li>
+						<li>431/650</li>
+					</ul>
+					<div class="progress mb-0" style="height:4px; width:100%;">
+						<div class="progress-bar bg-warning progress-animated" style="width:50%; height:8px;" role="progressbar">
+							<span class="sr-only">60% Complete</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="media mb-0 align-items-center event-list">
+				<div class="p-3 text-center rounded me-3 date-bx bgl-success">
+					<h2 class="mb-0 text-black">28</h2>
+					<h5 class="mb-1 text-black">Fri</h5>
+				</div>
+				<div class="media-body px-0">
+					<h6 class="mt-0 mb-3 fs-14"><a class="text-black" href="events.html">The Story Of Danau Toba (Musical Drama)</a></h6>
+					<ul class="fs-14 list-inline mb-2 d-flex justify-content-between">
+						<li>Ticket Sold</li>
+						<li>650/650</li>
+					</ul>
+					<div class="progress mb-0" style="height:4px; width:100%;">
+						<div class="progress-bar bg-success progress-animated" style="width:100%; height:8px;" role="progressbar">
+							<span class="sr-only">60% Complete</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-footer justify-content-between border-0 d-flex fs-14">
+			<span>5 events more</span>
+			<a href="javascript:void(0);" class="text-primary">View more <i class="las la-long-arrow-alt-right scale5 ms-2"></i></a>
+		</div>
+	</div>
+	<div class="card shadow-none rounded-0 bg-transparent h-auto mb-0">
+		<div class="card-body text-center event-calender">
+			<a href="javascript:void(0);" class="btn btn-primary btn-rounded btn shadow">
+				+ New Event
+			</a>
+		</div>
+	</div>
+</div>
+
+<!--**********************************
+	EventList END
+***********************************-->        <!--**********************************
+	Content body start
+***********************************-->
+<div class="content-body">
+	<!-- row -->
+	<div class="container-fluid">
+		<div class="page-titles">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+				<li class="breadcrumb-item active"><a href="javascript:void(0)">Analytics</a></li>
+			</ol>
+		</div>
+		<div class="row">
+			<div class="col-xl-6 col-xxl-12 col-lg-12 col-md-12 col-sm-12">
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="card">
+							<div class="card-header border-0 pb-0 d-sm-flex d-block">
+								<h4 class="card-title mb-1">Trending Items</h4>
+								<div class="dropdown ms-auto text-end">
+									<div class="btn-link" data-bs-toggle="dropdown">
+										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="12" cy="5" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="19" r="2"></circle></g></svg>
+									</div>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="javascript:void(0);">View Detail</a>
+										<a class="dropdown-item" href="javascript:void(0);">Edit</a>
+										<a class="dropdown-item" href="javascript:void(0);">Delete</a>
+									</div>
+								</div>
+							</div>
+							<div class="card-body pt-0 p-0">
+								<div class="align-items-center d-flex mx-0 border-bottom p-4">
+									<span class="number col-2 col-sm-1 px-0 align-self-center">#1</span>
+									<div class="outline border rounded-circle p-3 me-3">
+										<svg class="primary-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M11.9042 5.18413L0.556031 16.5323C0.281453 16.8068 0.281453 17.2521 0.556031 17.5266L3.24911 20.2197C3.44481 20.4154 3.73705 20.4781 3.99582 20.3799C5.0289 19.9878 6.20067 20.2386 6.98098 21.0189C7.76129 21.7992 8.01214 22.971 7.62003 24.0041C7.52178 24.2628 7.5845 24.5551 7.78019 24.7508L10.4733 27.4439C10.7479 27.7185 11.1931 27.7185 11.4677 27.4439L22.8158 16.0958L11.9042 5.18413Z" fill="#2130B8"></path>
+										<path d="M27.4439 10.4734L24.7508 7.78025C24.5551 7.58456 24.2628 7.52185 24.0041 7.62009C22.971 8.0122 21.7993 7.76132 21.019 6.98101C20.2386 6.2007 19.9878 5.02893 20.3799 3.99585C20.4781 3.73711 20.4154 3.44484 20.2197 3.24914L17.5266 0.556062C17.252 0.281484 16.8068 0.281484 16.5322 0.556062L12.8985 4.18975L23.8102 15.1014L27.4439 11.4677C27.7185 11.1932 27.7185 10.7479 27.4439 10.4734Z" fill="#2130B8"></path>
+										</svg>
+									</div>
+									<div class="col-sm-4 col-12 col-xxl-5 my-3 my-sm-0 px-0">
+										<h5 class="mt-0 mb-0"><a class="text-black" href="javascript:void(0);">Beautiful Fireworks Shows In The New Year 2020</a></h5>
+									</div>
+									<div class="ms-sm-auto col-2 col-sm-2 px-0 d-flex align-self-center align-items-center">
+										<div class="text-center">
+											<h4 class="mb-0 text-black">454</h4>
+											<span class="fs-14">Sales</span>
+										</div>
+									</div>
+									<div class="me-3 col-2 col-sm-1">
+										<span class="peity-success" data-style="width:100%;" style="display: none;">0,2,1,4</span>
+										<svg  class="primary-icon" width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="3.71426" height="27" rx="1.85713" transform="matrix(-1 0 0 1 26 0)" fill="#2130B8"></rect>
+											<rect width="3.71426" height="19.6364" rx="1.85713" transform="matrix(-1 0 0 1 18.5723 7.36365)" fill="#2130B8"></rect>
+											<rect width="3.71426" height="8.59091" rx="1.85713" transform="matrix(-1 0 0 1 11.1436 18.4091)" fill="#2130B8"></rect>
+											<rect width="4.19045" height="16.6154" rx="2.09522" transform="matrix(-1 0 0 1 4.19043 10.3846)" fill="#2130B8"></rect>
+										</svg>
+									</div>
+									<svg width="22" height="11" class="col-sm-1 col-2" viewBox="0 0 22 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 11L11 -4.72849e-07L22 11" fill="#21B830"></path>
+									</svg>
+								</div>
+								<div class="align-items-center d-flex mx-0 border-bottom p-4">
+									<span class="number col-2 col-sm-1 px-0 align-self-center">#2</span>
+									<div class="outline border rounded-circle p-3 me-3">
+										<svg class="primary-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M11.9042 5.18413L0.556031 16.5323C0.281453 16.8068 0.281453 17.2521 0.556031 17.5266L3.24911 20.2197C3.44481 20.4154 3.73705 20.4781 3.99582 20.3799C5.0289 19.9878 6.20067 20.2386 6.98098 21.0189C7.76129 21.7992 8.01214 22.971 7.62003 24.0041C7.52178 24.2628 7.5845 24.5551 7.78019 24.7508L10.4733 27.4439C10.7479 27.7185 11.1931 27.7185 11.4677 27.4439L22.8158 16.0958L11.9042 5.18413Z" fill="#2130B8"></path>
+										<path d="M27.4439 10.4734L24.7508 7.78025C24.5551 7.58456 24.2628 7.52185 24.0041 7.62009C22.971 8.0122 21.7993 7.76132 21.019 6.98101C20.2386 6.2007 19.9878 5.02893 20.3799 3.99585C20.4781 3.73711 20.4154 3.44484 20.2197 3.24914L17.5266 0.556062C17.252 0.281484 16.8068 0.281484 16.5322 0.556062L12.8985 4.18975L23.8102 15.1014L27.4439 11.4677C27.7185 11.1932 27.7185 10.7479 27.4439 10.4734Z" fill="#2130B8"></path>
+										</svg>
+									</div>
+									<div class="col-sm-4 col-12 col-xxl-5 my-3 my-sm-0 px-0">
+										<h5 class="mt-0 mb-0"><a class="text-black" href="javascript:void(0);">Jakarta Indie Music Festival 2020</a></h5>
+									</div>
+									<div class="ms-sm-auto col-2 col-sm-2 px-0 d-flex align-self-center align-items-center">
+										<div class="text-center">
+											<h4 class="mb-0 text-black">485</h4>
+											<span class="fs-14">Sales</span>
+										</div>
+									</div>
+									<div class="me-3 col-2 col-sm-1">
+										<span class="peity-success" data-style="width:100%;" style="display: none;">0,2,1,4</span>
+										<svg class="primary-icon" width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="3.71426" height="27" rx="1.85713" transform="matrix(-1 0 0 1 26 0)" fill="#2130B8"></rect>
+											<rect width="3.71426" height="19.6364" rx="1.85713" transform="matrix(-1 0 0 1 18.5723 7.36365)" fill="#2130B8"></rect>
+											<rect width="3.71426" height="8.59091" rx="1.85713" transform="matrix(-1 0 0 1 11.1436 18.4091)" fill="#2130B8"></rect>
+											<rect width="4.19045" height="16.6154" rx="2.09522" transform="matrix(-1 0 0 1 4.19043 10.3846)" fill="#2130B8"></rect>
+										</svg>
+									</div>
+									<svg width="22" height="11" class="col-sm-1 col-2" viewBox="0 0 22 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 -9.61651e-07L11 11L22 0" fill="#FF2626"></path>
+									</svg>
+								</div>
+								<div class="align-items-center d-flex mx-0 border-bottom p-4">
+									<span class="number col-2 col-sm-1 px-0 align-self-center">#3</span>
+									<div class="outline border rounded-circle p-3 me-3">
+										<svg class="primary-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M11.9042 5.18413L0.556031 16.5323C0.281453 16.8068 0.281453 17.2521 0.556031 17.5266L3.24911 20.2197C3.44481 20.4154 3.73705 20.4781 3.99582 20.3799C5.0289 19.9878 6.20067 20.2386 6.98098 21.0189C7.76129 21.7992 8.01214 22.971 7.62003 24.0041C7.52178 24.2628 7.5845 24.5551 7.78019 24.7508L10.4733 27.4439C10.7479 27.7185 11.1931 27.7185 11.4677 27.4439L22.8158 16.0958L11.9042 5.18413Z" fill="#2130B8"></path>
+										<path d="M27.4439 10.4734L24.7508 7.78025C24.5551 7.58456 24.2628 7.52185 24.0041 7.62009C22.971 8.0122 21.7993 7.76132 21.019 6.98101C20.2386 6.2007 19.9878 5.02893 20.3799 3.99585C20.4781 3.73711 20.4154 3.44484 20.2197 3.24914L17.5266 0.556062C17.252 0.281484 16.8068 0.281484 16.5322 0.556062L12.8985 4.18975L23.8102 15.1014L27.4439 11.4677C27.7185 11.1932 27.7185 10.7479 27.4439 10.4734Z" fill="#2130B8"></path>
+										</svg>
+									</div>
+									<div class="col-sm-4 col-12 col-xxl-5 my-3 my-sm-0 px-0">
+										<h5 class="mt-0 mb-0"><a class="text-black" href="javascript:void(0);">Live Choir in Sydney 2020</a></h5>
+									</div>
+									<div class="ms-sm-auto col-2 col-sm-2 px-0 d-flex align-self-center align-items-center">
+										<div class="text-center">
+											<h4 class="mb-0 text-black">250</h4>
+											<span class="fs-14">Sales</span>
+										</div>
+									</div>
+									<div class="me-3 col-2 col-sm-1">
+										<span class="peity-success" data-style="width:100%;" style="display: none;">0,2,1,4</span>
+										<svg class="primary-icon" width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="3.71426" height="27" rx="1.85713" transform="matrix(-1 0 0 1 26 0)" fill="#2130B8"></rect>
+											<rect width="3.71426" height="19.6364" rx="1.85713" transform="matrix(-1 0 0 1 18.5723 7.36365)" fill="#2130B8"></rect>
+											<rect width="3.71426" height="8.59091" rx="1.85713" transform="matrix(-1 0 0 1 11.1436 18.4091)" fill="#2130B8"></rect>
+											<rect width="4.19045" height="16.6154" rx="2.09522" transform="matrix(-1 0 0 1 4.19043 10.3846)" fill="#2130B8"></rect>
+										</svg>
+									</div>
+									<svg width="22" height="11" class="col-sm-1 col-2" viewBox="0 0 22 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 11L11 -4.72849e-07L22 11" fill="#21B830"></path>
+									</svg>
+								</div>
+								<div class="align-items-center d-flex mx-0 border-bottom p-4">
+									<span class="number col-2 col-sm-1 px-0 align-self-center">#4</span>
+									<div class="outline border rounded-circle p-3 me-3">
+										<svg class="primary-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M11.9042 5.18413L0.556031 16.5323C0.281453 16.8068 0.281453 17.2521 0.556031 17.5266L3.24911 20.2197C3.44481 20.4154 3.73705 20.4781 3.99582 20.3799C5.0289 19.9878 6.20067 20.2386 6.98098 21.0189C7.76129 21.7992 8.01214 22.971 7.62003 24.0041C7.52178 24.2628 7.5845 24.5551 7.78019 24.7508L10.4733 27.4439C10.7479 27.7185 11.1931 27.7185 11.4677 27.4439L22.8158 16.0958L11.9042 5.18413Z" fill="#2130B8"></path>
+										<path d="M27.4439 10.4734L24.7508 7.78025C24.5551 7.58456 24.2628 7.52185 24.0041 7.62009C22.971 8.0122 21.7993 7.76132 21.019 6.98101C20.2386 6.2007 19.9878 5.02893 20.3799 3.99585C20.4781 3.73711 20.4154 3.44484 20.2197 3.24914L17.5266 0.556062C17.252 0.281484 16.8068 0.281484 16.5322 0.556062L12.8985 4.18975L23.8102 15.1014L27.4439 11.4677C27.7185 11.1932 27.7185 10.7479 27.4439 10.4734Z" fill="#2130B8"></path>
+										</svg>
+									</div>
+									<div class="col-sm-4 col-12 col-xxl-5 my-3 my-sm-0 px-0">
+										<h5 class="mt-0 mb-0"><a class="text-black" href="javascript:void(0);">Artist Performing Festival In Aus..</a></h5>
+									</div>
+									<div class="ms-sm-auto col-2 col-sm-2 px-0 d-flex align-self-center align-items-center">
+										<div class="text-center">
+											<h4 class="mb-0 text-black">350</h4>
+											<span class="fs-14">Sales</span>
+										</div>
+									</div>
+									<div class="me-3 col-2 col-sm-1">
+										<span class="peity-success" data-style="width:100%;" style="display: none;">0,2,1,4</span>
+										<svg class="primary-icon" width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="3.71426" height="27" rx="1.85713" transform="matrix(-1 0 0 1 26 0)" fill="#2130B8"></rect>
+											<rect width="3.71426" height="19.6364" rx="1.85713" transform="matrix(-1 0 0 1 18.5723 7.36365)" fill="#2130B8"></rect>
+											<rect width="3.71426" height="8.59091" rx="1.85713" transform="matrix(-1 0 0 1 11.1436 18.4091)" fill="#2130B8"></rect>
+											<rect width="4.19045" height="16.6154" rx="2.09522" transform="matrix(-1 0 0 1 4.19043 10.3846)" fill="#2130B8"></rect>
+										</svg>
+									</div>
+									<svg width="22" height="11" class="col-sm-1 col-2" viewBox="0 0 22 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 -9.61651e-07L11 11L22 0" fill="#FF2626"></path>
+									</svg>
+								</div>
+								<div class="align-items-center d-flex mx-0 border-bottom p-4">
+									<span class="number col-2 col-sm-1 px-0 align-self-center">#5</span>
+									<div class="outline border rounded-circle p-3 me-3">
+										<svg class="primary-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M11.9042 5.18413L0.556031 16.5323C0.281453 16.8068 0.281453 17.2521 0.556031 17.5266L3.24911 20.2197C3.44481 20.4154 3.73705 20.4781 3.99582 20.3799C5.0289 19.9878 6.20067 20.2386 6.98098 21.0189C7.76129 21.7992 8.01214 22.971 7.62003 24.0041C7.52178 24.2628 7.5845 24.5551 7.78019 24.7508L10.4733 27.4439C10.7479 27.7185 11.1931 27.7185 11.4677 27.4439L22.8158 16.0958L11.9042 5.18413Z" fill="#2130B8"></path>
+										<path d="M27.4439 10.4734L24.7508 7.78025C24.5551 7.58456 24.2628 7.52185 24.0041 7.62009C22.971 8.0122 21.7993 7.76132 21.019 6.98101C20.2386 6.2007 19.9878 5.02893 20.3799 3.99585C20.4781 3.73711 20.4154 3.44484 20.2197 3.24914L17.5266 0.556062C17.252 0.281484 16.8068 0.281484 16.5322 0.556062L12.8985 4.18975L23.8102 15.1014L27.4439 11.4677C27.7185 11.1932 27.7185 10.7479 27.4439 10.4734Z" fill="#2130B8"></path>
+										</svg>
+									</div>
+									<div class="col-sm-4 col-12 col-xxl-5 my-3 my-sm-0 px-0">
+										<h5 class="mt-0 mb-0"><a class="text-black" href="javascript:void(0);">[LIVE] Football Charity Event 2020</a></h5>
+									</div>
+									<div class="ms-sm-auto col-2 col-sm-2 px-0 d-flex align-self-center align-items-center">
+										<div class="text-center">
+											<h4 class="mb-0 text-black">752</h4>
+											<span class="fs-14">Sales</span>
+										</div>
+									</div>
+									<div class="me-3 col-2 col-sm-1">
+										<span class="peity-success" data-style="width:100%;" style="display: none;">0,2,1,4</span>
+										<svg class="primary-icon" width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="3.71426" height="27" rx="1.85713" transform="matrix(-1 0 0 1 26 0)" fill="#2130B8"></rect>
+											<rect width="3.71426" height="19.6364" rx="1.85713" transform="matrix(-1 0 0 1 18.5723 7.36365)" fill="#2130B8"></rect>
+											<rect width="3.71426" height="8.59091" rx="1.85713" transform="matrix(-1 0 0 1 11.1436 18.4091)" fill="#2130B8"></rect>
+											<rect width="4.19045" height="16.6154" rx="2.09522" transform="matrix(-1 0 0 1 4.19043 10.3846)" fill="#2130B8"></rect>
+										</svg>
+									</div>
+									<svg width="22" height="11" class="col-sm-1 col-2" viewBox="0 0 22 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 11L11 -4.72849e-07L22 11" fill="#21B830"></path>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-12">
+						<div class="card bg-warning">
+							<div class="card-header border-0 pb-0 d-sm-flex d-block align-items-start">
+								<h2 class="mb-1 text-white fs-35 font-w600">94%
+									<svg width="22" height="11" viewBox="0 0 22 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0 11L11 -4.72849e-07L22 11" fill="#fff"></path>
+									</svg>
+								</h2>
+								<div class="dropdown ms-auto text-end">
+									<h4 class="text-white">Sales Comparison</h4>
+									<span class="text-white font-w300">Than last day</span>
+								</div>
+							</div>
+							<div class="card-body p-2">
+								<canvas id="ticketSold" height="217"></canvas>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-6 col-sm-6">
+						<div class="card overflow-hidden">
+							<div class="card-header border-0 pb-0">
+								<div>
+									<h3 class="mb-0 text-black font-w600">$124,136</h3>
+									<p class="mb-1">Revenue</p>
+								</div>
+							</div>
+							<div class="card-body p-0  mt-widget">	
+								<canvas id="revenueChart" height="85"></canvas>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-6 col-sm-6">
+						<div class="card overflow-hidden">
+							<div class="card-header border-0 pb-0">
+								<div>
+									<h3 class="mb-0 text-black font-w600">639 Pcs</h3>
+									<p class="mb-1">Ticket Ordered</p>
+								</div>
+							</div>
+							<div class="card-body p-0">	
+								<div class="col-7 px-0 offset-5 mt-widget">	
+									<canvas id="chart_widget_2" height="85"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-xxl-6 col-lg-6 col-md-6 col-sm-12">
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="card">
+							<div class="card-header border-0 pb-0">
+								<h4 class="card-title">Revenue</h4>
+								<div class="dropdown ms-auto text-end">
+									<div class="btn-link" data-bs-toggle="dropdown">
+										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="12" cy="5" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="19" r="2"></circle></g></svg>
+									</div>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a class="dropdown-item" href="javascript:void(0);">View Detail</a>
+										<a class="dropdown-item" href="javascript:void(0);">Edit</a>
+										<a class="dropdown-item" href="javascript:void(0);">Delete</a>
+									</div>
+								</div>
+							</div>
+							<div class="card-body">
+								 <canvas id="areaChart_2" height="350"></canvas>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-12">
+						<div class="card">
+							<div class="card-header pb-0 border-0">
+								<div>
+									<h5 class="mb-0 text-black font-weight-bold">456k Pcs</h5>
+									<p class="fs-14 mb-0">Ticket Sold</p>
+								</div>
+								<select class="default-select d-inline-block style-2" aria-label="Default select example">
+									<option selected>Daily</option>
+									<option value="1">Newest</option>
+									<option value="2">Old</option>
+								</select>
+							</div>
+							<div class="card-body">
+								<div class="progress mb-0" style="height:8px; width:100%;">
+									<div class="progress-bar bg-primary progress-animated" style="width:80%; height:8px;" role="progressbar">
+										<span class="sr-only">80% Complete</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-12">
+						<div class="card">
+							<div class="card-header pb-0 border-0">
+								<div>
+									<h5 class="mb-0 text-black font-weight-bold">Pie Chart</h5>
+									<p class="fs-14 mb-0">Ticket Sold</p>
+								</div>
+								<select class="default-select d-inline-block style-2" aria-label="Default select example">
+									<option selected>Daily</option>
+									<option value="1">Newest</option>
+									<option value="2">Old</option>
+								</select>
+							</div>
+							<div class="card-body pt-2">
+								<div id="chartCircle"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-3 col-xxl-6 col-lg-6 col-md-6 col-sm-12">
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="card">
+							<div class="card-body">
+								<div class="media align-items-center">
+									<span class="me-4">
+										<svg  class="primary-icon" width="50" height="53" viewBox="0 0 50 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="7.11688" height="52.1905" rx="3" transform="matrix(-1 0 0 1 49.8184 0)" fill="#2130B8"></rect>
+										<rect width="7.11688" height="37.9567" rx="3" transform="matrix(-1 0 0 1 35.585 14.2338)" fill="#2130B8"></rect>
+										<rect width="7.11688" height="16.6061" rx="3" transform="matrix(-1 0 0 1 21.3516 35.5844)" fill="#2130B8"></rect>
+										<rect width="8.0293" height="32.1172" rx="3" transform="matrix(-1 0 0 1 8.0293 20.0732)" fill="#2130B8"></rect>
+										</svg>
+									</span>
+									<div class="media-body ms-1">
+										<p class="mb-2">Income</p>
+										<h3 class="mb-0 text-black font-w600">$126,000</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-12">
+						<div class="card">
+							<div class="card-body">
+								<div class="media align-items-center">
+									<span class="me-4">
+										<svg  class="primary-icon" width="51" height="31" viewBox="0 0 51 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M49.3228 0.840214C50.7496 2.08096 50.9005 4.24349 49.6597 5.67035L34.6786 22.8987C32.284 25.6525 28.1505 26.0444 25.281 23.7898L18.1758 18.2072L5.77023 29.883C4.3933 31.1789 2.22651 31.1133 0.930578 29.7363C-0.365358 28.3594 -0.299697 26.1926 1.07723 24.8967L13.4828 13.2209C15.9494 10.8993 19.7428 10.7301 22.4063 12.8229L29.5115 18.4055L44.4926 1.1772C45.7334 -0.249661 47.8959 -0.400534 49.3228 0.840214Z" fill="#2130B8"></path>
+										</svg>
+									</span>
+									<div class="media-body ms-1">
+										<p class="mb-2">Customer</p>
+										<h3 class="mb-0 text-black font-w600">109,511</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-12">
+						<div class="card">
+							<div class="card-body">
+								<div class="media align-items-center">
+									<span class="me-4">
+										<svg  class="primary-icon" width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M25.5 43C34.8888 43 42.5 35.3888 42.5 26C42.5 16.6112 34.8888 9 25.5 9C16.1112 9 8.5 16.6112 8.5 26C8.5 35.3888 16.1112 43 25.5 43ZM25.5 51.5C39.5833 51.5 51 40.0833 51 26C51 11.9167 39.5833 0.5 25.5 0.5C11.4167 0.5 0 11.9167 0 26C0 40.0833 11.4167 51.5 25.5 51.5Z" fill="white" fill-opacity="0.18"></path>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M33.9997 1.95836C31.2809 0.997147 28.4073 0.5 25.4997 0.5V8.86605C28.5687 8.86605 31.5815 9.6904 34.223 11.253C36.8645 12.8155 39.0379 15.0589 40.5159 17.7486C41.9939 20.4384 42.7223 23.4757 42.625 26.5433C42.5277 29.6108 41.6082 32.5959 39.9627 35.1866C38.3172 37.7772 36.006 39.8783 33.2707 41.2703C30.5355 42.6623 27.4766 43.294 24.4136 43.0995C21.3507 42.905 18.3963 41.8913 15.8591 40.1645C13.3219 38.4376 11.2952 36.061 9.99062 33.283L2.41797 36.8391C3.65388 39.4709 5.32535 41.8607 7.35106 43.9131C8.50759 45.0848 9.77958 46.1466 11.1519 47.0806C14.9279 49.6506 19.3249 51.1592 23.8834 51.4487C28.4418 51.7382 32.9943 50.798 37.0652 48.7264C41.136 46.6548 44.5756 43.5277 47.0246 39.6721C49.4736 35.8165 50.842 31.3739 50.9868 26.8085C51.1317 22.2432 50.0476 17.7228 47.8479 13.7197C45.6482 9.71663 42.4137 6.37787 38.4824 4.05236C37.0536 3.2072 35.5519 2.50715 33.9997 1.95836Z" fill="#2130B8"></path>
+									</svg>
+									</span>
+									<div class="media-body ms-1">
+										<p class="mb-2">Last Than Year</p>
+										<div class="d-flex align-items-center">
+											<h3 class="mb-0 me-3 text-black font-w600">59%</h3>
+											<svg width="29" height="15" viewBox="0 0 29 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0 15L14.5 -1.27353e-06L29 15" fill="#21B830"></path>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-header border-0 pb-0">
+								<h4 class="card-title">Sales Summary</h4>
+								<div class="btn-group">
+									<select class="default-select style-2" aria-label="Default select example">
+										<option selected>This Weak</option>
+										<option value="1">Next Weak</option>
+									</select>
+								</div>
+							</div>
+							<div class="card-body pt-2">
+								<div class="border p-3 d-flex justify-content-between fs-14 rounded-lg mb-4">
+									<span class="text-black">Tuesday</span>
+									<span class="text-black">215,523 pcs</span>
+								</div>
+								
+								<div class="text-center">
+									<div id="polarAreaCharts"></div>
+								</div>
+								<div class="row mx-0">
+									<div class="col-6 px-0 d-flex align-items-center mb-3">
+										<div class="bg-primary rounded me-3 d-block" style="width:25px; height:25px;"></div>
+										<div>
+											<h5 class="mb-1 text-black">VIP</h5>
+											<span>30%</span>
+										</div>
+									</div>
+									<div class="col-6 px-0 d-flex align-items-center mb-3">
+										<div class="bg-success rounded me-3 d-block" style="width:25px; height:25px;"></div>
+										<div>
+											<h5 class="mb-1 text-black">Exclusive</h5>
+											<span>24%</span>
+										</div>
+									</div>
+									<div class="col-6 px-0 d-flex align-items-center">
+										<div class="bg-warning rounded me-3 d-block" style="width:25px; height:25px;"></div>
+										<div>
+											<h5 class="mb-1 text-black">Reguler</h5>
+											<span>30%</span>
+										</div>
+									</div>
+									<div class="col-6 px-0 d-flex align-items-center">
+										<div class="bg-secondary rounded me-3 d-block" style="width:25px; height:25px;"></div>
+										<div>
+											<h5 class="mb-1 text-black">Economic</h5>
+											<span>2%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="card overflow-hidden">
+							<div class="card-header border-0 pb-2">
+								<div>
+									<h3 class="mb-0 text-black font-w600">2%</h3>
+									<p class="mb-1">Ticket Refunded</p>
+								</div>
+							</div>
+							<div class="card-body p-0">	
+								<span class="updating-chart">1,2,4,3,2,5,4,2,3,4,5,3,2,3,5,4,3,5,5,2</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!--**********************************
+	Content body end
+***********************************-->
+        <!--**********************************
+	Footer start
+***********************************-->
+<div class="footer">
+	<div class="copyright">
+		<p>Copyright © Designed &amp; Developed by <a href="http://polyverse.com.ng/" target="_blank">Revoxtechsolutions</a> 2023</p>
+	</div>
+</div>
+<!--**********************************
+	Footer end
+***********************************-->	</div>
+	
+			<script src="public/assets/vendor/global/global.min.js"></script>
+			<script src="public/assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+			<script src="public/assets/vendor/bootstrap-datetimepicker/js/moment.js"></script>
+			<script src="public/assets/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+		
+			<script src="public/assets/vendor/chart.js/Chart.bundle.min.js"></script>
+			<script src="public/assets/vendor/apexchart/apexchart.js"></script>
+			<script src="public/assets/vendor/peity/jquery.peity.min.js"></script>
+			<script src="public/assets/js/dashboard/analytics.js"></script>
+		
+			<script src="public/assets/js/custom.js"></script>
+			<script src="public/assets/js/deznav-init.js"></script>
+			<!-- <script src="public/assets/js/demo.js"></script>
+			<script src="public/assets/js/styleSwitcher.js"></script> -->
+			
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+</body>
+
+<!-- Mirrored from tixia.dexignzone.com/codeigniter/demo/analytics by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 09 Feb 2023 06:07:00 GMT -->
+</html>

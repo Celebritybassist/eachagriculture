@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from tixia.dexignzone.com/codeigniter/demo/customer_list by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 09 Feb 2023 06:03:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+    <meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="Tixia - Crypto Codeigniter Admin Dashboard" />
+	<meta property="og:title" content="Tixia - Crypto Codeigniter Admin Dashboard" />
+	<meta property="og:description" content="Tixia - Crypto Codeigniter Admin Dashboard" />
+	<meta property="og:image" content="../social-image.png" />
+	<meta name="format-detection" content="telephone=no">
+    <title>Eachagriculture || List </title>
+    <!-- Favicon icon -->
+	
+	<link rel="icon" type="image/png" sizes="16x16" href="public/assets/images/eachagricultural.jpeg">	
+	
+		
+		 <link href="public/assets/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>	
+			
+		 <link href="public/assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" type="text/css"/>	
+		
+		 <link href="public/assets/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css"/>	
+		
+		 <link href="public/assets/css/style.css" rel="stylesheet" type="text/css"/>	
+		
+</head>
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+	
+	<!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+		<!--**********************************
+	Nav header start
+***********************************-->
+<div class="nav-header" style="background-color:#1f6306;">
+	<img src="public/assets/images/agric-site.gif" alt="" width="100">
+	<!-- <a href="index.html" class="brand-logo">
+		<svg class="logo-abbr" width="48" height="36" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path class="svg-logo-path" d="M18.281 14.25C18.281 13.2145 19.1204 12.375 20.156 12.375H35.3438C36.3794 12.375 37.2188 13.2145 37.2188 14.25C37.2188 15.2856 36.3794 16.125 35.3438 16.125H20.156C19.1204 16.125 18.281 15.2856 18.281 14.25ZM44.25 14.25C44.25 15.2839 45.0911 16.125 46.125 16.125C47.1606 16.125 48 16.9645 48 18V26.2461C48 27.2817 47.1606 28.1211 46.125 28.1211H32.2766L25.3258 35.072C24.5935 35.8043 23.4063 35.8041 22.6742 35.072L15.7234 28.1211H1.875C0.839437 28.1211 0 27.2817 0 26.2461V18C0 16.9645 0.839437 16.125 1.875 16.125C2.90887 16.125 3.75 15.2839 3.75 14.25C3.75 13.2162 2.90887 12.375 1.875 12.375C0.839437 12.375 0 11.5356 0 10.5V2.25397C0 1.2184 0.839437 0.378967 1.875 0.378967H46.125C47.1606 0.378967 48 1.2184 48 2.25397V10.5C48 11.5356 47.1606 12.375 46.125 12.375C45.0911 12.375 44.25 13.2162 44.25 14.25ZM11.2498 4.12897H3.75V8.94631C5.93259 9.72022 7.5 11.8055 7.5 14.25C7.5 16.6946 5.93259 18.7798 3.75 19.5537V24.3711H11.2498V4.12897ZM44.25 4.12897H14.9998V24.3711H16.5C16.9972 24.3711 17.4743 24.5686 17.8258 24.9202L24 31.0945L30.1742 24.9203C30.5257 24.5687 31.0028 24.3712 31.5 24.3712H44.25V19.5538C42.0674 18.7799 40.5 16.6947 40.5 14.2501C40.5 11.8056 42.0674 9.72031 44.25 8.9464V4.12897Z" fill="#2130B8"/>
+		</svg>
+		<svg class="brand-title" width="87" height="28" viewBox="0 0 87 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path class="svg-logo-title" d="M0.0880001 7.11H6.412V27H11.172V7.11H17.496V3.268H0.0880001V7.11ZM20.969 27H25.729V8.164H20.969V27ZM23.383 5.92C25.049 5.92 26.307 4.696 26.307 3.132C26.307 1.568 25.049 0.343999 23.383 0.343999C21.683 0.343999 20.459 1.568 20.459 3.132C20.459 4.696 21.683 5.92 23.383 5.92ZM40.8359 27H46.2079L39.9519 17.548L46.1399 8.164H41.0399L37.5719 13.978L33.7299 8.164H28.3579L34.5799 17.548L28.4259 27H33.5259L36.9599 21.152L40.8359 27ZM48.7933 27H53.5533V8.164H48.7933V27ZM51.2073 5.92C52.8733 5.92 54.1313 4.696 54.1313 3.132C54.1313 1.568 52.8733 0.343999 51.2073 0.343999C49.5073 0.343999 48.2833 1.568 48.2833 3.132C48.2833 4.696 49.5073 5.92 51.2073 5.92ZM57.0322 17.514C57.0322 23.396 60.8402 27.306 65.6002 27.306C68.5922 27.306 70.7342 25.878 71.8562 24.246V27H76.6502V8.164H71.8562V10.85C70.7342 9.286 68.6602 7.858 65.6342 7.858C60.8402 7.858 57.0322 11.632 57.0322 17.514ZM71.8562 17.582C71.8562 21.152 69.4762 23.124 66.8582 23.124C64.3082 23.124 61.8942 21.084 61.8942 17.514C61.8942 13.944 64.3082 12.04 66.8582 12.04C69.4762 12.04 71.8562 14.012 71.8562 17.582ZM86.2971 24.45C86.2971 22.886 85.0731 21.662 83.4071 21.662C81.6731 21.662 80.4491 22.886 80.4491 24.45C80.4491 26.014 81.6731 27.238 83.4071 27.238C85.0731 27.238 86.2971 26.014 86.2971 24.45Z" fill="#2130B8"/>
+		</svg>
+	</a> -->
+
+	<div class="nav-control">
+		<div class="hamburger">
+			<span class="line"></span><span class="line"></span><span class="line"></span>
+		</div>
+	</div>
+</div>
+<!--**********************************
+	Nav header end
+***********************************-->		
+      <!--**********************************
+	Header start
+***********************************-->
+<div class="header">
+	<div class="header-content">
+		<nav class="navbar navbar-expand">
+			<div class="collapse navbar-collapse justify-content-between">
+				<div class="header-left">
+					<div class="dashboard_bar">
+						Customer List					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+</div>
+<!--**********************************
+	Header end ti-comment-alt
+***********************************-->        <!--**********************************
+	Sidebar start
+***********************************-->
+<div class="deznav">
+	<div class="deznav-scroll" style="background-color:#1f6306;">
+		<ul class="metismenu" id="menu">
+			<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+					<i class="flaticon-381-networking"></i>
+					<span class="nav-text"  style="background-color:#1f6306;">Dashboard</span>
+				</a>
+				<ul aria-expanded="false">
+					<li><a href="index.html"  style="background-color:#1f6306;">Dashboard</a></li>
+					<li><a href="customer_list.html"  style="background-color:#1f6306;">Customer List</a></li>
+				</ul>
+			</li>
+			
+			<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+					<i class="flaticon-381-notepad"></i>
+					<span class="nav-text"  style="background-color:#1f6306;">Forms</span>
+				</a>
+				<ul aria-expanded="false">
+					<li><a href="form_element.html"  style="background-color:#1f6306;">Form Elements</a></li>
+				</ul>
+			</li>
+			<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+					<i class="flaticon-381-layer-1"></i>
+					<span class="nav-text"  style="background-color:#1f6306;">Pages</span>
+				</a>
+				<ul aria-expanded="false">
+					<li><a href="page_register.html"  style="background-color:#1f6306;">Register</a></li>
+                    <li><a href="page_login.html"  style="background-color:#1f6306;">Login</a></li>
+					<li><a class="has-arrow" href="javascript:void()" aria-expanded="false"  style="background-color:#1f6306;">Error</a>
+						<ul aria-expanded="false">
+							<li><a href="page_error_400.html"  style="background-color:#1f6306;">Error 400</a></li>
+                            <li><a href="page_error_403.html"  style="background-color:#1f6306;">Error 403</a></li>
+                            <li><a href="page_error_404.html"  style="background-color:#1f6306;">Error 404</a></li>
+                            <li><a href="page_error_500.html"  style="background-color:#1f6306;">Error 500</a></li>
+                            <li><a href="page_error_503.html"  style="background-color:#1f6306;">Error 503</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="copyright">
+			<p>Eachagriculture Admin Dashboard <br/>© 2023 All Rights Reserved</p>
+			<p class="op5">Designed <span class="heart"></span> by Revoxtechsolutions</p>
+		</div>
+	</div>
+</div>
+<!--**********************************
+	Sidebar end
+***********************************-->        <!--**********************************
+	EventList
+***********************************-->
+<div class="event-sidebar dz-scroll " id="eventSidebar">
+	<div class="card shadow-none rounded-0 bg-transparent h-auto mb-0">
+		<div class="card-body text-center event-calender pb-2">
+			<input type='text' class="form-control d-none" id='datetimepicker1' />
+		</div>
+	</div>
+	<div class="card shadow-none rounded-0 bg-transparent h-auto">
+		<div class="card-header border-0 pb-0">
+			<h4 class="text-black">Upcoming Events</h4>
+		</div>
+		<div class="card-body">
+			<div class="media mb-5 align-items-center event-list">
+				<div class="p-3 text-center rounded me-3 date-bx bgl-primary">
+					<h2 class="mb-0 text-black">3</h2>
+					<h5 class="mb-1 text-black">Wed</h5>
+				</div>
+				<div class="media-body px-0">
+					<h6 class="mt-0 mb-3 fs-14"><a class="text-black" href="events.html">Live Concert Choir Charity Event 2020</a></h6>
+					<ul class="fs-14 list-inline mb-2 d-flex justify-content-between">
+						<li>Ticket Sold</li>
+						<li>561/650</li>
+					</ul>
+					<div class="progress mb-0" style="height:4px; width:100%;">
+						<div class="progress-bar bg-warning progress-animated" style="width:85%; height:8px;" role="progressbar">
+							<span class="sr-only">60% Complete</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="media mb-5 align-items-center event-list">
+				<div class="p-3 text-center rounded me-3 date-bx bgl-primary">
+					<h2 class="mb-0 text-black">16</h2>
+					<h5 class="mb-1 text-black">Tue</h5>
+				</div>
+				<div class="media-body px-0">
+					<h6 class="mt-0 mb-3 fs-14"><a class="text-black" href="events.html">Beautiful Fireworks Show In The New Year Night</a></h6>
+					<ul class="fs-14 list-inline mb-2 d-flex justify-content-between">
+						<li>Ticket Sold</li>
+						<li>431/650</li>
+					</ul>
+					<div class="progress mb-0" style="height:4px; width:100%;">
+						<div class="progress-bar bg-warning progress-animated" style="width:50%; height:8px;" role="progressbar">
+							<span class="sr-only">60% Complete</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="media mb-0 align-items-center event-list">
+				<div class="p-3 text-center rounded me-3 date-bx bgl-success">
+					<h2 class="mb-0 text-black">28</h2>
+					<h5 class="mb-1 text-black">Fri</h5>
+				</div>
+				<div class="media-body px-0">
+					<h6 class="mt-0 mb-3 fs-14"><a class="text-black" href="events.html">The Story Of Danau Toba (Musical Drama)</a></h6>
+					<ul class="fs-14 list-inline mb-2 d-flex justify-content-between">
+						<li>Ticket Sold</li>
+						<li>650/650</li>
+					</ul>
+					<div class="progress mb-0" style="height:4px; width:100%;">
+						<div class="progress-bar bg-success progress-animated" style="width:100%; height:8px;" role="progressbar">
+							<span class="sr-only">60% Complete</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-footer justify-content-between border-0 d-flex fs-14">
+			<span>5 events more</span>
+			<a href="javascript:void(0);" class="text-primary">View more <i class="las la-long-arrow-alt-right scale5 ms-2"></i></a>
+		</div>
+	</div>
+	<div class="card shadow-none rounded-0 bg-transparent h-auto mb-0">
+		<div class="card-body text-center event-calender">
+			<a href="javascript:void(0);" class="btn btn-primary btn-rounded btn shadow">
+				+ New Event
+			</a>
+		</div>
+	</div>
+</div>
+
+<!--**********************************
+	EventList END
+***********************************-->        <!--**********************************
+	Content body start
+***********************************-->
+<div class="content-body">
+	<!-- row -->
+	<div class="container-fluid">
+		<div class="row mb-5 align-items-center">
+			<div class="col-xl-3 mb-4 mb-xl-0">
+				<a href="javascript:void(0);" class="btn btn-primary light btn-lg d-block rounded shadow px-2">+New Customer</a>
+			</div>
+			<div class="col-xl-9">
+				<div class="card m-0 ">
+					<div class="card-body py-3 py-md-2">
+						<div class="row align-items-center">
+							<div class="col-md-5 mb-3 mb-md-0">
+								<div class="media align-items-end">
+									<span class="me-2 mb-1">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g clip-path="url(#clip0)">
+											<path d="M21 24H3C2.73478 24 2.48043 23.8946 2.29289 23.7071C2.10536 23.5196 2 23.2652 2 23V22.008C2.00287 20.4622 2.52021 18.9613 3.47044 17.742C4.42066 16.5227 5.74971 15.6544 7.248 15.274C7.46045 15.2219 7.64959 15.1008 7.78571 14.9296C7.92182 14.7583 7.9972 14.5467 8 14.328V13.322L6.883 12.206C6.6032 11.9313 6.38099 11.6036 6.22937 11.2419C6.07776 10.8803 5.99978 10.4921 6 10.1V5.96201C6.01833 4.41693 6.62821 2.93765 7.70414 1.82861C8.78007 0.719572 10.2402 0.0651427 11.784 5.16174e-06C12.5992 -0.00104609 13.4067 0.158488 14.1603 0.469498C14.9139 0.780509 15.5989 1.2369 16.1761 1.81263C16.7533 2.38835 17.2114 3.07213 17.5244 3.82491C17.8373 4.5777 17.999 5.38476 18 6.20001V10.1C17.9997 10.4949 17.9204 10.8857 17.7666 11.2495C17.6129 11.6132 17.388 11.9426 17.105 12.218L16 13.322V14.328C16.0029 14.5469 16.0784 14.7586 16.2147 14.9298C16.351 15.1011 16.5404 15.2221 16.753 15.274C18.251 15.6548 19.5797 16.5232 20.5298 17.7424C21.4798 18.9617 21.997 20.4624 22 22.008V23C22 23.2652 21.8946 23.5196 21.7071 23.7071C21.5196 23.8946 21.2652 24 21 24ZM4 22H20C19.9954 20.8996 19.6249 19.8319 18.9469 18.9651C18.2689 18.0983 17.3219 17.4816 16.255 17.212C15.6125 17.0494 15.0423 16.6779 14.6341 16.1558C14.2259 15.6337 14.0028 14.9907 14 14.328V12.908C14.0001 12.6428 14.1055 12.3885 14.293 12.201L15.703 10.792C15.7965 10.7026 15.8711 10.5952 15.9221 10.4763C15.9731 10.3574 15.9996 10.2294 16 10.1V6.20001C16.0017 5.09492 15.5671 4.03383 14.7907 3.24737C14.0144 2.46092 12.959 2.01265 11.854 2.00001C10.8264 2.04117 9.85379 2.47507 9.1367 3.21225C8.41962 3.94943 8.01275 4.93367 8 5.96201V10.1C7.99979 10.2266 8.0249 10.352 8.07384 10.4688C8.12278 10.5856 8.19458 10.6914 8.285 10.78L9.707 12.2C9.89455 12.3875 9.99994 12.6418 10 12.907V14.327C9.99724 14.9896 9.77432 15.6325 9.3663 16.1545C8.95827 16.6766 8.3883 17.0482 7.746 17.211C6.67872 17.4804 5.73137 18.0972 5.05318 18.9642C4.37498 19.8313 4.00447 20.8993 4 22Z" fill="black"/>
+											</g>
+											<defs>
+											<clipPath id="clip0">
+											<rect width="24" height="24" fill="white"/>
+											</clipPath>
+											</defs>
+										</svg>
+									</span>
+									<div class="media-body ms-1">
+										<p class="mb-1 fs-14">Total Customer</p>
+										<h3 class="mb-0 text-black font-w600 fs-20">129.000 Person</h3>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-7 text-md-end">
+								<a href="javascript:void(0);" class="btn btn-outline-primary rounded btn-sm px-4">Active</a>
+								<a href="javascript:void(0);" class="btn btn-secondary rounded ms-2 btn-sm px-4">Edit</a>
+								<a href="javascript:void(0);" class="btn btn-danger rounded ms-2 btn-sm px-4">Delete</a>
+							</div>
+						</div>							
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="table-responsive">
+					<table id="example5" class="table display mb-4 table-responsive-xl dataTablesCard fs-14">
+						<thead>
+							<tr>
+								<th>
+									<div class="checkbox me-0 align-self-center">
+										<div class="form-check custom-checkbox checkbox-info">
+											<input type="checkbox" class="form-check-input"  id="checkAll" required="">
+											<label class="form-check-label" for="checkAll"></label>
+										</div>
+									</div>
+								</th>
+								<th>Cust.Id</th>
+								<th>Date Join</th>
+								<th>Customer Name</th>
+								<th>Ticket Ordered</th>
+								<th>Location</th>
+								<th>Last Order</th>
+								<th>Total Spent</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="checkbox me-0 align-self-center">
+										<div class="form-check custom-checkbox checkbox-info">
+											<input type="checkbox" class="form-check-input" checked id="customCheckBox2" required="">
+											<label class="form-check-label" for="customCheckBox2"></label>
+										</div>
+									</div>
+								</td>
+								<td>#0012451</td>
+								<td>21/11/2017</td>
+								<td>Cive Saluve</td>
+								<td>The Story Of Danaou Taba (Musical Drama)</td>
+								<td>Medan Indonesia</td>
+								<td>04/08/2020 12:34 AM</td>
+								<td class="text-primary font-w500">$1,200</td>
+								<td class="d-flex">
+									<a href="javascript:void(0);">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.2557 2.99994C17.5201 2.73729 17.8341 2.52895 18.1796 2.38681C18.5251 2.24467 18.8954 2.17151 19.2694 2.17151C19.6433 2.17151 20.0136 2.24467 20.3591 2.38681C20.7046 2.52895 21.0186 2.73729 21.283 2.99994C21.5474 3.26258 21.7572 3.57438 21.9003 3.91754C22.0434 4.2607 22.1171 4.6285 22.1171 4.99994C22.1171 5.37137 22.0434 5.73917 21.9003 6.08233C21.7572 6.42549 21.5474 6.73729 21.283 6.99994L7.69086 20.4999L2.15332 21.9999L3.66356 16.4999L17.2557 2.99994Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+									<a href="javascript:void(0);" class="ms-4">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.50195 5.99994H5.5156H21.6248" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8.5361 5.99994V3.99994C8.5361 3.46951 8.74826 2.9608 9.12589 2.58573C9.50352 2.21065 10.0157 1.99994 10.5498 1.99994H14.5771C15.1111 1.99994 15.6233 2.21065 16.0009 2.58573C16.3786 2.9608 16.5907 3.46951 16.5907 3.99994V5.99994M19.6112 5.99994V19.9999C19.6112 20.5304 19.399 21.0391 19.0214 21.4142C18.6438 21.7892 18.1316 21.9999 17.5975 21.9999H7.52928C6.99522 21.9999 6.48304 21.7892 6.10541 21.4142C5.72778 21.0391 5.51563 20.5304 5.51562 19.9999V5.99994H19.6112Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkbox me-0 align-self-center">
+										<div class="form-check custom-checkbox checkbox-info">
+											<input type="checkbox" class="form-check-input" checked id="customCheckBox3" required="">
+											<label class="form-check-label" for="customCheckBox3"></label>
+										</div>
+									</div>
+								</td>
+								<td>#0012451</td>
+								<td>21/11/2017</td>
+								<td>Bella Simatupang</td>
+								<td>The Powerfull Concert Festival London 2020</td>
+								<td>Medan Indonesia</td>
+								<td>04/08/2020 12:34 AM</td>
+								<td class="text-primary font-w500">$7,300</td>
+								<td class="d-flex">
+									<a href="javascript:void(0);">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.2557 2.99994C17.5201 2.73729 17.8341 2.52895 18.1796 2.38681C18.5251 2.24467 18.8954 2.17151 19.2694 2.17151C19.6433 2.17151 20.0136 2.24467 20.3591 2.38681C20.7046 2.52895 21.0186 2.73729 21.283 2.99994C21.5474 3.26258 21.7572 3.57438 21.9003 3.91754C22.0434 4.2607 22.1171 4.6285 22.1171 4.99994C22.1171 5.37137 22.0434 5.73917 21.9003 6.08233C21.7572 6.42549 21.5474 6.73729 21.283 6.99994L7.69086 20.4999L2.15332 21.9999L3.66356 16.4999L17.2557 2.99994Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+									<a href="javascript:void(0);" class="ms-4">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.50195 5.99994H5.5156H21.6248" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8.5361 5.99994V3.99994C8.5361 3.46951 8.74826 2.9608 9.12589 2.58573C9.50352 2.21065 10.0157 1.99994 10.5498 1.99994H14.5771C15.1111 1.99994 15.6233 2.21065 16.0009 2.58573C16.3786 2.9608 16.5907 3.46951 16.5907 3.99994V5.99994M19.6112 5.99994V19.9999C19.6112 20.5304 19.399 21.0391 19.0214 21.4142C18.6438 21.7892 18.1316 21.9999 17.5975 21.9999H7.52928C6.99522 21.9999 6.48304 21.7892 6.10541 21.4142C5.72778 21.0391 5.51563 20.5304 5.51562 19.9999V5.99994H19.6112Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkbox me-0 align-self-center">
+										<div class="form-check custom-checkbox checkbox-info">
+											<input type="checkbox" class="form-check-input" checked id="customCheckBox4" required="">
+											<label class="form-check-label" for="customCheckBox4"></label>
+										</div>
+									</div>
+								</td>
+								<td>#0012451</td>
+								<td>21/11/2017</td>
+								<td>Andrew Stevano</td>
+								<td>The Story Of Danaou Taba (Musical Drama)</td>
+								<td>Medan Indonesia</td>
+								<td>04/08/2020 12:34 AM</td>
+								<td class="text-primary font-w500">$1,500</td>
+								<td class="d-flex">
+								<a href="javascript:void(0);">
+									<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M17.2557 2.99994C17.5201 2.73729 17.8341 2.52895 18.1796 2.38681C18.5251 2.24467 18.8954 2.17151 19.2694 2.17151C19.6433 2.17151 20.0136 2.24467 20.3591 2.38681C20.7046 2.52895 21.0186 2.73729 21.283 2.99994C21.5474 3.26258 21.7572 3.57438 21.9003 3.91754C22.0434 4.2607 22.1171 4.6285 22.1171 4.99994C22.1171 5.37137 22.0434 5.73917 21.9003 6.08233C21.7572 6.42549 21.5474 6.73729 21.283 6.99994L7.69086 20.4999L2.15332 21.9999L3.66356 16.4999L17.2557 2.99994Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								<a href="javascript:void(0);" class="ms-4">
+									<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M3.50195 5.99994H5.5156H21.6248" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M8.5361 5.99994V3.99994C8.5361 3.46951 8.74826 2.9608 9.12589 2.58573C9.50352 2.21065 10.0157 1.99994 10.5498 1.99994H14.5771C15.1111 1.99994 15.6233 2.21065 16.0009 2.58573C16.3786 2.9608 16.5907 3.46951 16.5907 3.99994V5.99994M19.6112 5.99994V19.9999C19.6112 20.5304 19.399 21.0391 19.0214 21.4142C18.6438 21.7892 18.1316 21.9999 17.5975 21.9999H7.52928C6.99522 21.9999 6.48304 21.7892 6.10541 21.4142C5.72778 21.0391 5.51563 20.5304 5.51562 19.9999V5.99994H19.6112Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkbox me-0 align-self-center">
+										<div class="form-check custom-checkbox checkbox-info">
+											<input type="checkbox" class="form-check-input" checked id="customCheckBox5" required="">
+											<label class="form-check-label" for="customCheckBox5"></label>
+										</div>
+									</div>
+								</td>
+								<td>#0012451</td>
+								<td>21/11/2017</td>
+								<td>Olivia Brownlee</td>
+								<td>The Story Of Danaou Taba (Musical Drama)</td>
+								<td>Medan Indonesia</td>
+								<td>04/08/2020 12:34 AM</td>
+								<td class="text-primary font-w500">$4,500</td>
+								<td class="d-flex">
+									<a href="javascript:void(0);">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.2557 2.99994C17.5201 2.73729 17.8341 2.52895 18.1796 2.38681C18.5251 2.24467 18.8954 2.17151 19.2694 2.17151C19.6433 2.17151 20.0136 2.24467 20.3591 2.38681C20.7046 2.52895 21.0186 2.73729 21.283 2.99994C21.5474 3.26258 21.7572 3.57438 21.9003 3.91754C22.0434 4.2607 22.1171 4.6285 22.1171 4.99994C22.1171 5.37137 22.0434 5.73917 21.9003 6.08233C21.7572 6.42549 21.5474 6.73729 21.283 6.99994L7.69086 20.4999L2.15332 21.9999L3.66356 16.4999L17.2557 2.99994Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+									<a href="javascript:void(0);" class="ms-4">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.50195 5.99994H5.5156H21.6248" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8.5361 5.99994V3.99994C8.5361 3.46951 8.74826 2.9608 9.12589 2.58573C9.50352 2.21065 10.0157 1.99994 10.5498 1.99994H14.5771C15.1111 1.99994 15.6233 2.21065 16.0009 2.58573C16.3786 2.9608 16.5907 3.46951 16.5907 3.99994V5.99994M19.6112 5.99994V19.9999C19.6112 20.5304 19.399 21.0391 19.0214 21.4142C18.6438 21.7892 18.1316 21.9999 17.5975 21.9999H7.52928C6.99522 21.9999 6.48304 21.7892 6.10541 21.4142C5.72778 21.0391 5.51563 20.5304 5.51562 19.9999V5.99994H19.6112Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkbox me-0 align-self-center">
+										<div class="form-check custom-checkbox checkbox-info">
+											<input type="checkbox" class="form-check-input" checked id="customCheckBox6" required="">
+											<label class="form-check-label" for="customCheckBox6"></label>
+										</div>
+									</div>
+								</td>
+								<td>#0012451</td>
+								<td>21/11/2017</td>
+								<td>James Roberto</td>
+								<td>The Story Of Danaou Taba (Musical Drama)</td>
+								<td>Medan Indonesia</td>
+								<td>04/08/2020 12:34 AM</td>
+								<td class="text-primary font-w500">$1,700</td>
+								<td class="d-flex">
+									<a href="javascript:void(0);">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.2557 2.99994C17.5201 2.73729 17.8341 2.52895 18.1796 2.38681C18.5251 2.24467 18.8954 2.17151 19.2694 2.17151C19.6433 2.17151 20.0136 2.24467 20.3591 2.38681C20.7046 2.52895 21.0186 2.73729 21.283 2.99994C21.5474 3.26258 21.7572 3.57438 21.9003 3.91754C22.0434 4.2607 22.1171 4.6285 22.1171 4.99994C22.1171 5.37137 22.0434 5.73917 21.9003 6.08233C21.7572 6.42549 21.5474 6.73729 21.283 6.99994L7.69086 20.4999L2.15332 21.9999L3.66356 16.4999L17.2557 2.99994Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+									<a href="javascript:void(0);" class="ms-4">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.50195 5.99994H5.5156H21.6248" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8.5361 5.99994V3.99994C8.5361 3.46951 8.74826 2.9608 9.12589 2.58573C9.50352 2.21065 10.0157 1.99994 10.5498 1.99994H14.5771C15.1111 1.99994 15.6233 2.21065 16.0009 2.58573C16.3786 2.9608 16.5907 3.46951 16.5907 3.99994V5.99994M19.6112 5.99994V19.9999C19.6112 20.5304 19.399 21.0391 19.0214 21.4142C18.6438 21.7892 18.1316 21.9999 17.5975 21.9999H7.52928C6.99522 21.9999 6.48304 21.7892 6.10541 21.4142C5.72778 21.0391 5.51563 20.5304 5.51562 19.9999V5.99994H19.6112Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkbox me-0 align-self-center">
+										<div class="form-check custom-checkbox checkbox-info">
+											<input type="checkbox" class="form-check-input" checked id="customCheckBox7" required="">
+											<label class="form-check-label" for="customCheckBox7"></label>
+										</div>
+									</div>
+								</td>
+								<td>#0012451</td>
+								<td>21/11/2017</td>
+								<td>Kevin Hurt</td>
+								<td>The Story Of Danaou Taba (Musical Drama)</td>
+								<td>Medan Indonesia</td>
+								<td>04/08/2020 12:34 AM</td>
+								<td class="text-primary font-w500">$1,700</td>
+								<td class="d-flex">
+									<a href="javascript:void(0);">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.2557 2.99994C17.5201 2.73729 17.8341 2.52895 18.1796 2.38681C18.5251 2.24467 18.8954 2.17151 19.2694 2.17151C19.6433 2.17151 20.0136 2.24467 20.3591 2.38681C20.7046 2.52895 21.0186 2.73729 21.283 2.99994C21.5474 3.26258 21.7572 3.57438 21.9003 3.91754C22.0434 4.2607 22.1171 4.6285 22.1171 4.99994C22.1171 5.37137 22.0434 5.73917 21.9003 6.08233C21.7572 6.42549 21.5474 6.73729 21.283 6.99994L7.69086 20.4999L2.15332 21.9999L3.66356 16.4999L17.2557 2.99994Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+									<a href="javascript:void(0);" class="ms-4">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.50195 5.99994H5.5156H21.6248" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8.5361 5.99994V3.99994C8.5361 3.46951 8.74826 2.9608 9.12589 2.58573C9.50352 2.21065 10.0157 1.99994 10.5498 1.99994H14.5771C15.1111 1.99994 15.6233 2.21065 16.0009 2.58573C16.3786 2.9608 16.5907 3.46951 16.5907 3.99994V5.99994M19.6112 5.99994V19.9999C19.6112 20.5304 19.399 21.0391 19.0214 21.4142C18.6438 21.7892 18.1316 21.9999 17.5975 21.9999H7.52928C6.99522 21.9999 6.48304 21.7892 6.10541 21.4142C5.72778 21.0391 5.51563 20.5304 5.51562 19.9999V5.99994H19.6112Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkbox me-0 align-self-center">
+										<div class="form-check custom-checkbox checkbox-info">
+											<input type="checkbox" class="form-check-input" checked id="customCheckBox8" required="">
+											<label class="form-check-label" for="customCheckBox8"></label>
+										</div>
+									</div>
+								</td>
+								<td>#0012451</td>
+								<td>21/11/2017</td>
+								<td>Sanuel Jakson</td>
+								<td>The Story Of Danaou Taba (Musical Drama)</td>
+								<td>Medan Indonesia</td>
+								<td>04/08/2020 12:34 AM</td>
+								<td class="text-primary font-w500">$3,200</td>
+								<td class="d-flex">
+									<a href="javascript:void(0);">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.2557 2.99994C17.5201 2.73729 17.8341 2.52895 18.1796 2.38681C18.5251 2.24467 18.8954 2.17151 19.2694 2.17151C19.6433 2.17151 20.0136 2.24467 20.3591 2.38681C20.7046 2.52895 21.0186 2.73729 21.283 2.99994C21.5474 3.26258 21.7572 3.57438 21.9003 3.91754C22.0434 4.2607 22.1171 4.6285 22.1171 4.99994C22.1171 5.37137 22.0434 5.73917 21.9003 6.08233C21.7572 6.42549 21.5474 6.73729 21.283 6.99994L7.69086 20.4999L2.15332 21.9999L3.66356 16.4999L17.2557 2.99994Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+									<a href="javascript:void(0);" class="ms-4">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.50195 5.99994H5.5156H21.6248" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8.5361 5.99994V3.99994C8.5361 3.46951 8.74826 2.9608 9.12589 2.58573C9.50352 2.21065 10.0157 1.99994 10.5498 1.99994H14.5771C15.1111 1.99994 15.6233 2.21065 16.0009 2.58573C16.3786 2.9608 16.5907 3.46951 16.5907 3.99994V5.99994M19.6112 5.99994V19.9999C19.6112 20.5304 19.399 21.0391 19.0214 21.4142C18.6438 21.7892 18.1316 21.9999 17.5975 21.9999H7.52928C6.99522 21.9999 6.48304 21.7892 6.10541 21.4142C5.72778 21.0391 5.51563 20.5304 5.51562 19.9999V5.99994H19.6112Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkbox me-0 align-self-center">
+										<div class="form-check custom-checkbox checkbox-info">
+											<input type="checkbox" class="form-check-input" checked id="customCheckBox9" required="">
+											<label class="form-check-label" for="customCheckBox9"></label>
+										</div>
+									</div>
+								</td>
+								<td>#0012451</td>
+								<td>21/11/2017</td>
+								<td>Cive Saluve</td>
+								<td>The Story Of Danaou Taba (Musical Drama)</td>
+								<td>Medan Indonesia</td>
+								<td>04/08/2020 12:34 AM</td>
+								<td class="text-primary  font-w500">$100</td>
+								<td class="d-flex">
+									<a href="javascript:void(0);">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.2557 2.99994C17.5201 2.73729 17.8341 2.52895 18.1796 2.38681C18.5251 2.24467 18.8954 2.17151 19.2694 2.17151C19.6433 2.17151 20.0136 2.24467 20.3591 2.38681C20.7046 2.52895 21.0186 2.73729 21.283 2.99994C21.5474 3.26258 21.7572 3.57438 21.9003 3.91754C22.0434 4.2607 22.1171 4.6285 22.1171 4.99994C22.1171 5.37137 22.0434 5.73917 21.9003 6.08233C21.7572 6.42549 21.5474 6.73729 21.283 6.99994L7.69086 20.4999L2.15332 21.9999L3.66356 16.4999L17.2557 2.99994Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+									<a href="javascript:void(0);" class="ms-4">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.50195 5.99994H5.5156H21.6248" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8.5361 5.99994V3.99994C8.5361 3.46951 8.74826 2.9608 9.12589 2.58573C9.50352 2.21065 10.0157 1.99994 10.5498 1.99994H14.5771C15.1111 1.99994 15.6233 2.21065 16.0009 2.58573C16.3786 2.9608 16.5907 3.46951 16.5907 3.99994V5.99994M19.6112 5.99994V19.9999C19.6112 20.5304 19.399 21.0391 19.0214 21.4142C18.6438 21.7892 18.1316 21.9999 17.5975 21.9999H7.52928C6.99522 21.9999 6.48304 21.7892 6.10541 21.4142C5.72778 21.0391 5.51563 20.5304 5.51562 19.9999V5.99994H19.6112Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkbox me-0 align-self-center">
+										<div class="form-check custom-checkbox checkbox-info">
+											<input type="checkbox" class="form-check-input" checked id="customCheckBox10" required="">
+											<label class="form-check-label" for="customCheckBox10"></label>
+										</div>
+									</div>
+								</td>
+								<td>#0012451</td>
+								<td>21/11/2017</td>
+								<td>Sanuel Jakson</td>
+								<td>The Story Of Danaou Taba (Musical Drama)</td>
+								<td>Medan Indonesia</td>
+								<td>04/08/2020 12:34 AM</td>
+								<td class="text-primary font-w500">$1,300</td>
+								<td class="d-flex">
+									<a href="javascript:void(0);">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.2557 2.99994C17.5201 2.73729 17.8341 2.52895 18.1796 2.38681C18.5251 2.24467 18.8954 2.17151 19.2694 2.17151C19.6433 2.17151 20.0136 2.24467 20.3591 2.38681C20.7046 2.52895 21.0186 2.73729 21.283 2.99994C21.5474 3.26258 21.7572 3.57438 21.9003 3.91754C22.0434 4.2607 22.1171 4.6285 22.1171 4.99994C22.1171 5.37137 22.0434 5.73917 21.9003 6.08233C21.7572 6.42549 21.5474 6.73729 21.283 6.99994L7.69086 20.4999L2.15332 21.9999L3.66356 16.4999L17.2557 2.99994Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+									<a href="javascript:void(0);" class="ms-4">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.50195 5.99994H5.5156H21.6248" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8.5361 5.99994V3.99994C8.5361 3.46951 8.74826 2.9608 9.12589 2.58573C9.50352 2.21065 10.0157 1.99994 10.5498 1.99994H14.5771C15.1111 1.99994 15.6233 2.21065 16.0009 2.58573C16.3786 2.9608 16.5907 3.46951 16.5907 3.99994V5.99994M19.6112 5.99994V19.9999C19.6112 20.5304 19.399 21.0391 19.0214 21.4142C18.6438 21.7892 18.1316 21.9999 17.5975 21.9999H7.52928C6.99522 21.9999 6.48304 21.7892 6.10541 21.4142C5.72778 21.0391 5.51563 20.5304 5.51562 19.9999V5.99994H19.6112Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkbox me-0 align-self-center">
+										<div class="form-check custom-checkbox checkbox-info">
+											<input type="checkbox" class="form-check-input" checked id="customCheckBox11" required="">
+											<label class="form-check-label" for="customCheckBox11"></label>
+										</div>
+									</div>
+								</td>
+								<td>#0012451</td>
+								<td>21/11/2017</td>
+								<td>Cive Slauw</td>
+								<td>The Story Of Danaou Taba (Musical Drama)</td>
+								<td>Medan Indonesia</td>
+								<td>04/08/2020 12:34 AM</td>
+								<td class="text-primary font-w500">$1,300</td>
+								<td class="d-flex">
+									<a href="javascript:void(0);">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.2557 2.99994C17.5201 2.73729 17.8341 2.52895 18.1796 2.38681C18.5251 2.24467 18.8954 2.17151 19.2694 2.17151C19.6433 2.17151 20.0136 2.24467 20.3591 2.38681C20.7046 2.52895 21.0186 2.73729 21.283 2.99994C21.5474 3.26258 21.7572 3.57438 21.9003 3.91754C22.0434 4.2607 22.1171 4.6285 22.1171 4.99994C22.1171 5.37137 22.0434 5.73917 21.9003 6.08233C21.7572 6.42549 21.5474 6.73729 21.283 6.99994L7.69086 20.4999L2.15332 21.9999L3.66356 16.4999L17.2557 2.99994Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+									<a href="javascript:void(0);" class="ms-4">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.50195 5.99994H5.5156H21.6248" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8.5361 5.99994V3.99994C8.5361 3.46951 8.74826 2.9608 9.12589 2.58573C9.50352 2.21065 10.0157 1.99994 10.5498 1.99994H14.5771C15.1111 1.99994 15.6233 2.21065 16.0009 2.58573C16.3786 2.9608 16.5907 3.46951 16.5907 3.99994V5.99994M19.6112 5.99994V19.9999C19.6112 20.5304 19.399 21.0391 19.0214 21.4142C18.6438 21.7892 18.1316 21.9999 17.5975 21.9999H7.52928C6.99522 21.9999 6.48304 21.7892 6.10541 21.4142C5.72778 21.0391 5.51563 20.5304 5.51562 19.9999V5.99994H19.6112Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkbox me-0 align-self-center">
+										<div class="form-check custom-checkbox checkbox-info">
+											<input type="checkbox" class="form-check-input" checked id="customCheckBox12" required="">
+											<label class="form-check-label" for="customCheckBox12"></label>
+										</div>
+									</div>
+								</td>
+								<td>#0012451</td>
+								<td>21/11/2017</td>
+								<td>Cive Saluve</td>
+								<td>The Story Of Danaou Taba (Musical Drama)</td>
+								<td>Medan Indonesia</td>
+								<td>04/08/2020 12:34 AM</td>
+								<td class="text-primary font-w500">$1,300</td>
+								<td class="d-flex">
+									<a href="javascript:void(0);">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.2557 2.99994C17.5201 2.73729 17.8341 2.52895 18.1796 2.38681C18.5251 2.24467 18.8954 2.17151 19.2694 2.17151C19.6433 2.17151 20.0136 2.24467 20.3591 2.38681C20.7046 2.52895 21.0186 2.73729 21.283 2.99994C21.5474 3.26258 21.7572 3.57438 21.9003 3.91754C22.0434 4.2607 22.1171 4.6285 22.1171 4.99994C22.1171 5.37137 22.0434 5.73917 21.9003 6.08233C21.7572 6.42549 21.5474 6.73729 21.283 6.99994L7.69086 20.4999L2.15332 21.9999L3.66356 16.4999L17.2557 2.99994Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+									<a href="javascript:void(0);" class="ms-4">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.50195 5.99994H5.5156H21.6248" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8.5361 5.99994V3.99994C8.5361 3.46951 8.74826 2.9608 9.12589 2.58573C9.50352 2.21065 10.0157 1.99994 10.5498 1.99994H14.5771C15.1111 1.99994 15.6233 2.21065 16.0009 2.58573C16.3786 2.9608 16.5907 3.46951 16.5907 3.99994V5.99994M19.6112 5.99994V19.9999C19.6112 20.5304 19.399 21.0391 19.0214 21.4142C18.6438 21.7892 18.1316 21.9999 17.5975 21.9999H7.52928C6.99522 21.9999 6.48304 21.7892 6.10541 21.4142C5.72778 21.0391 5.51563 20.5304 5.51562 19.9999V5.99994H19.6112Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkbox me-0 align-self-center">
+										<div class="form-check custom-checkbox checkbox-info">
+											<input type="checkbox" class="form-check-input" checked id="customCheckBox13" required="">
+											<label class="form-check-label" for="customCheckBox13"></label>
+										</div>
+									</div>
+								</td>
+								<td>#0012451</td>
+								<td>21/11/2017</td>
+								<td>Bella Simatupang</td>
+								<td>The Story Of Danaou Taba (Musical Drama)</td>
+								<td>Medan Indonesia</td>
+								<td>04/08/2020 12:34 AM</td>
+								<td class="text-primary font-w500">$1,300</td>
+								<td class="d-flex">
+									<a href="javascript:void(0);">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.2557 2.99994C17.5201 2.73729 17.8341 2.52895 18.1796 2.38681C18.5251 2.24467 18.8954 2.17151 19.2694 2.17151C19.6433 2.17151 20.0136 2.24467 20.3591 2.38681C20.7046 2.52895 21.0186 2.73729 21.283 2.99994C21.5474 3.26258 21.7572 3.57438 21.9003 3.91754C22.0434 4.2607 22.1171 4.6285 22.1171 4.99994C22.1171 5.37137 22.0434 5.73917 21.9003 6.08233C21.7572 6.42549 21.5474 6.73729 21.283 6.99994L7.69086 20.4999L2.15332 21.9999L3.66356 16.4999L17.2557 2.99994Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+									<a href="javascript:void(0);" class="ms-4">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.50195 5.99994H5.5156H21.6248" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8.5361 5.99994V3.99994C8.5361 3.46951 8.74826 2.9608 9.12589 2.58573C9.50352 2.21065 10.0157 1.99994 10.5498 1.99994H14.5771C15.1111 1.99994 15.6233 2.21065 16.0009 2.58573C16.3786 2.9608 16.5907 3.46951 16.5907 3.99994V5.99994M19.6112 5.99994V19.9999C19.6112 20.5304 19.399 21.0391 19.0214 21.4142C18.6438 21.7892 18.1316 21.9999 17.5975 21.9999H7.52928C6.99522 21.9999 6.48304 21.7892 6.10541 21.4142C5.72778 21.0391 5.51563 20.5304 5.51562 19.9999V5.99994H19.6112Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkbox me-0 align-self-center">
+										<div class="form-check custom-checkbox checkbox-info">
+											<input type="checkbox" class="form-check-input" checked id="customCheckBox14" required="">
+											<label class="form-check-label" for="customCheckBox14"></label>
+										</div>
+									</div>
+								</td>
+								<td>#0012451</td>
+								<td>21/11/2017</td>
+								<td>Andrew Stevano</td>
+								<td>The Story Of Danaou Taba (Musical Drama)</td>
+								<td>Medan Indonesia</td>
+								<td>04/08/2020 12:34 AM</td>
+								<td class="text-primary font-w500">$1,300</td>
+								<td class="d-flex">
+									<a href="javascript:void(0);">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.2557 2.99994C17.5201 2.73729 17.8341 2.52895 18.1796 2.38681C18.5251 2.24467 18.8954 2.17151 19.2694 2.17151C19.6433 2.17151 20.0136 2.24467 20.3591 2.38681C20.7046 2.52895 21.0186 2.73729 21.283 2.99994C21.5474 3.26258 21.7572 3.57438 21.9003 3.91754C22.0434 4.2607 22.1171 4.6285 22.1171 4.99994C22.1171 5.37137 22.0434 5.73917 21.9003 6.08233C21.7572 6.42549 21.5474 6.73729 21.283 6.99994L7.69086 20.4999L2.15332 21.9999L3.66356 16.4999L17.2557 2.99994Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+									<a href="javascript:void(0);" class="ms-4">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.50195 5.99994H5.5156H21.6248" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8.5361 5.99994V3.99994C8.5361 3.46951 8.74826 2.9608 9.12589 2.58573C9.50352 2.21065 10.0157 1.99994 10.5498 1.99994H14.5771C15.1111 1.99994 15.6233 2.21065 16.0009 2.58573C16.3786 2.9608 16.5907 3.46951 16.5907 3.99994V5.99994M19.6112 5.99994V19.9999C19.6112 20.5304 19.399 21.0391 19.0214 21.4142C18.6438 21.7892 18.1316 21.9999 17.5975 21.9999H7.52928C6.99522 21.9999 6.48304 21.7892 6.10541 21.4142C5.72778 21.0391 5.51563 20.5304 5.51562 19.9999V5.99994H19.6112Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkbox me-0 align-self-center">
+										<div class="form-check custom-checkbox checkbox-info">
+											<input type="checkbox" class="form-check-input" checked id="customCheckBox15" required="">
+											<label class="form-check-label" for="customCheckBox15"></label>
+										</div>
+									</div>
+								</td>
+								<td>#0012451</td>
+								<td>21/11/2017</td>
+								<td>James Roberto</td>
+								<td>The Story Of Danaou Taba (Musical Drama)</td>
+								<td>Medan Indonesia</td>
+								<td>04/08/2020 12:34 AM</td>
+								<td class="text-primary font-w500">$1,300</td>
+								<td class="d-flex">
+									<a href="javascript:void(0);">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.2557 2.99994C17.5201 2.73729 17.8341 2.52895 18.1796 2.38681C18.5251 2.24467 18.8954 2.17151 19.2694 2.17151C19.6433 2.17151 20.0136 2.24467 20.3591 2.38681C20.7046 2.52895 21.0186 2.73729 21.283 2.99994C21.5474 3.26258 21.7572 3.57438 21.9003 3.91754C22.0434 4.2607 22.1171 4.6285 22.1171 4.99994C22.1171 5.37137 22.0434 5.73917 21.9003 6.08233C21.7572 6.42549 21.5474 6.73729 21.283 6.99994L7.69086 20.4999L2.15332 21.9999L3.66356 16.4999L17.2557 2.99994Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+									<a href="javascript:void(0);" class="ms-4">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.50195 5.99994H5.5156H21.6248" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8.5361 5.99994V3.99994C8.5361 3.46951 8.74826 2.9608 9.12589 2.58573C9.50352 2.21065 10.0157 1.99994 10.5498 1.99994H14.5771C15.1111 1.99994 15.6233 2.21065 16.0009 2.58573C16.3786 2.9608 16.5907 3.46951 16.5907 3.99994V5.99994M19.6112 5.99994V19.9999C19.6112 20.5304 19.399 21.0391 19.0214 21.4142C18.6438 21.7892 18.1316 21.9999 17.5975 21.9999H7.52928C6.99522 21.9999 6.48304 21.7892 6.10541 21.4142C5.72778 21.0391 5.51563 20.5304 5.51562 19.9999V5.99994H19.6112Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkbox me-0 align-self-center">
+										<div class="form-check custom-checkbox checkbox-info">
+											<input type="checkbox" class="form-check-input" checked id="customCheckBox16" required="">
+											<label class="form-check-label" for="customCheckBox16"></label>
+										</div>
+									</div>
+								</td>
+								<td>#0012451</td>
+								<td>21/11/2017</td>
+								<td>Olivia Brownlee</td>
+								<td>The Story Of Danaou Taba (Musical Drama)</td>
+								<td>Medan Indonesia</td>
+								<td>04/08/2020 12:34 AM</td>
+								<td class="text-primary font-w500">$1,300</td>
+								<td class="d-flex">
+									<a href="javascript:void(0);">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.2557 2.99994C17.5201 2.73729 17.8341 2.52895 18.1796 2.38681C18.5251 2.24467 18.8954 2.17151 19.2694 2.17151C19.6433 2.17151 20.0136 2.24467 20.3591 2.38681C20.7046 2.52895 21.0186 2.73729 21.283 2.99994C21.5474 3.26258 21.7572 3.57438 21.9003 3.91754C22.0434 4.2607 22.1171 4.6285 22.1171 4.99994C22.1171 5.37137 22.0434 5.73917 21.9003 6.08233C21.7572 6.42549 21.5474 6.73729 21.283 6.99994L7.69086 20.4999L2.15332 21.9999L3.66356 16.4999L17.2557 2.99994Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+									<a href="javascript:void(0);" class="ms-4">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.50195 5.99994H5.5156H21.6248" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8.5361 5.99994V3.99994C8.5361 3.46951 8.74826 2.9608 9.12589 2.58573C9.50352 2.21065 10.0157 1.99994 10.5498 1.99994H14.5771C15.1111 1.99994 15.6233 2.21065 16.0009 2.58573C16.3786 2.9608 16.5907 3.46951 16.5907 3.99994V5.99994M19.6112 5.99994V19.9999C19.6112 20.5304 19.399 21.0391 19.0214 21.4142C18.6438 21.7892 18.1316 21.9999 17.5975 21.9999H7.52928C6.99522 21.9999 6.48304 21.7892 6.10541 21.4142C5.72778 21.0391 5.51563 20.5304 5.51562 19.9999V5.99994H19.6112Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkbox me-0 align-self-center">
+										<div class="form-check custom-checkbox checkbox-info">
+											<input type="checkbox" class="form-check-input" checked id="customCheckBox17" required="">
+											<label class="form-check-label" for="customCheckBox17"></label>
+										</div>
+									</div>
+								</td>
+								<td>#0012451</td>
+								<td>21/11/2017</td>
+								<td>Andrew Stevano</td>
+								<td>The Story Of Danaou Taba (Musical Drama)</td>
+								<td>Medan Indonesia</td>
+								<td>04/08/2020 12:34 AM</td>
+								<td class="text-primary font-w500">$1,300</td>
+								<td class="d-flex">
+									<a href="javascript:void(0);">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.2557 2.99994C17.5201 2.73729 17.8341 2.52895 18.1796 2.38681C18.5251 2.24467 18.8954 2.17151 19.2694 2.17151C19.6433 2.17151 20.0136 2.24467 20.3591 2.38681C20.7046 2.52895 21.0186 2.73729 21.283 2.99994C21.5474 3.26258 21.7572 3.57438 21.9003 3.91754C22.0434 4.2607 22.1171 4.6285 22.1171 4.99994C22.1171 5.37137 22.0434 5.73917 21.9003 6.08233C21.7572 6.42549 21.5474 6.73729 21.283 6.99994L7.69086 20.4999L2.15332 21.9999L3.66356 16.4999L17.2557 2.99994Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+									<a href="javascript:void(0);" class="ms-4">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.50195 5.99994H5.5156H21.6248" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8.5361 5.99994V3.99994C8.5361 3.46951 8.74826 2.9608 9.12589 2.58573C9.50352 2.21065 10.0157 1.99994 10.5498 1.99994H14.5771C15.1111 1.99994 15.6233 2.21065 16.0009 2.58573C16.3786 2.9608 16.5907 3.46951 16.5907 3.99994V5.99994M19.6112 5.99994V19.9999C19.6112 20.5304 19.399 21.0391 19.0214 21.4142C18.6438 21.7892 18.1316 21.9999 17.5975 21.9999H7.52928C6.99522 21.9999 6.48304 21.7892 6.10541 21.4142C5.72778 21.0391 5.51563 20.5304 5.51562 19.9999V5.99994H19.6112Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkbox me-0 align-self-center">
+										<div class="form-check custom-checkbox checkbox-info">
+											<input type="checkbox" class="form-check-input" checked id="customCheckBox18" required="">
+											<label class="form-check-label" for="customCheckBox18"></label>
+										</div>
+									</div>
+								</td>
+								<td>#0012451</td>
+								<td>21/11/2017</td>
+								<td>Bella Simatupang</td>
+								<td>The Story Of Danaou Taba (Musical Drama)</td>
+								<td>Medan Indonesia</td>
+								<td>04/08/2020 12:34 AM</td>
+								<td class="text-primary font-w500">$1,300</td>
+								<td class="d-flex">
+									<a href="javascript:void(0);">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M17.2557 2.99994C17.5201 2.73729 17.8341 2.52895 18.1796 2.38681C18.5251 2.24467 18.8954 2.17151 19.2694 2.17151C19.6433 2.17151 20.0136 2.24467 20.3591 2.38681C20.7046 2.52895 21.0186 2.73729 21.283 2.99994C21.5474 3.26258 21.7572 3.57438 21.9003 3.91754C22.0434 4.2607 22.1171 4.6285 22.1171 4.99994C22.1171 5.37137 22.0434 5.73917 21.9003 6.08233C21.7572 6.42549 21.5474 6.73729 21.283 6.99994L7.69086 20.4999L2.15332 21.9999L3.66356 16.4999L17.2557 2.99994Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+									<a href="javascript:void(0);" class="ms-4">
+										<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.50195 5.99994H5.5156H21.6248" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M8.5361 5.99994V3.99994C8.5361 3.46951 8.74826 2.9608 9.12589 2.58573C9.50352 2.21065 10.0157 1.99994 10.5498 1.99994H14.5771C15.1111 1.99994 15.6233 2.21065 16.0009 2.58573C16.3786 2.9608 16.5907 3.46951 16.5907 3.99994V5.99994M19.6112 5.99994V19.9999C19.6112 20.5304 19.399 21.0391 19.0214 21.4142C18.6438 21.7892 18.1316 21.9999 17.5975 21.9999H7.52928C6.99522 21.9999 6.48304 21.7892 6.10541 21.4142C5.72778 21.0391 5.51563 20.5304 5.51562 19.9999V5.99994H19.6112Z" stroke="#A0A0A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--**********************************
+	Content body end
+***********************************-->
+        <!--**********************************
+	Footer start
+***********************************-->
+<div class="footer">
+	<div class="copyright">
+		<p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">DexignZone</a> 2022</p>
+	</div>
+</div>
+<!--**********************************
+	Footer end
+***********************************-->	</div>
+	
+			<script src="public/assets/vendor/global/global.min.js"></script>
+			<script src="public/assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+			<script src="public/assets/vendor/bootstrap-datetimepicker/js/moment.js"></script>
+			<script src="public/assets/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+		
+			<script src="public/assets/vendor/apexchart/apexchart.js"></script>
+			<script src="public/assets/vendor/datatables/js/jquery.dataTables.min.js"></script>
+			<script src="public/assets/js/plugins-init/datatables.init.js"></script>
+		
+			<script src="public/assets/js/custom.js"></script>
+			<script src="public/assets/js/deznav-init.js"></script>
+			<!-- <script src="public/assets/js/demo.js"></script>
+			<script src="public/assets/js/styleSwitcher.js"></script> -->
+			
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+</body>
+
+<!-- Mirrored from tixia.dexignzone.com/codeigniter/demo/customer_list by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 09 Feb 2023 06:05:48 GMT -->
+</html>
